@@ -195,7 +195,7 @@ const About = () => {
               className="education-image"
             />
             <div className="education-header">
-              <h6>2018 - now</h6>
+              <h6>2018 - 2022</h6>
               <p>ICT Software Engineering, VIA Horsens</p>
             </div>
             <ul>
