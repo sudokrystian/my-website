@@ -1,0 +1,58 @@
+$theme-color: #205081;
+$highlightes-placeholder: #23588d;
+$text-color: #fff;
+$image-height: 40vh;
+$padding-banner: 10px;
+$buttons-size: 25px;
+
+.banner-box {
+    background-color: $theme-color;
+    width: 100%;
+
+    .pictures-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        width: 100%;
+        height: $image-height;
+    }
+    
+    .banner-placeholder {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background-color: $highlightes-placeholder;
+            cursor: pointer;
+        } 
+        svg {
+            width: $buttons-size;
+            height: $buttons-size;
+        }
+    }
+}
+
+.banner-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+.banner-pic {
+    max-width: 70vw;
+    display: block;
+    object-fit: cover;
+    max-height: $image-height;  
+    transition: transform .3s;
+    margin-top: 20px;
+}  
+
+.banner-text {
+    padding: $padding-banner;
+    text-align: center;
+    color: $text-color;
+}

@@ -1,0 +1,103 @@
+$border-color: rgba(0, 0, 0, 0.274);
+$padding-project: 15px;
+$padding-sides: 60px;
+$padding-sides-mobile: 20px;
+$image-width: 380px;
+
+.project-div {
+  @media (max-width: 648px) {
+    padding: 70px $padding-sides-mobile;
+  }
+  @media (min-width: 649px) {
+    padding: 70px $padding-sides;
+  }
+
+  .project-title {
+    padding-top: $padding-project;
+    // text-align: center;
+  }
+
+  .project-description-buttons{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button {
+      width: 110px;
+      height: 40px;
+      border-radius: 8px;
+      background-color: #1a1a1a;
+      color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }  
+
+  .project-content-container {
+
+    padding-top: $padding-project;
+
+    @media (min-width: 649px) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    img {
+      border: 1px solid $border-color;
+
+      @media (min-width: 649px) {
+        width: $image-width;
+        object-fit: cover;
+        border-radius: 45px;
+      }
+
+      @media (max-width: 648px) {
+        width: 100%;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .project-content-text {
+      @media (min-width: 649px) {
+        padding-left: 40px;
+      }
+
+      display: flex;
+      flex-direction: column;
+
+      .project-technologies {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+        @media (max-width: 648px) {
+          padding-top: 15px;
+            justify-content: center;
+          }
+      }
+      .project-repository-button {
+        width: 180px;
+        height: 50px;
+
+        button {
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+          background-color: #1a1a1a;
+          color: #fff;
+          box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+          transition: transform 0.3s;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+}

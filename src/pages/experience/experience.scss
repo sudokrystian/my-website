@@ -1,0 +1,66 @@
+$padding-experience: 15px;
+$padding-sides: 100px;
+$padding-sides-mobile: 20px;
+
+.experience-div {
+    @media (max-width: 648px) {
+        padding: 70px $padding-sides-mobile;
+    }
+    @media (min-width: 649px) {
+        padding: 70px $padding-sides;
+    }
+
+    .experience-title {
+        padding-top: $padding-experience;
+        text-align: center;
+    }
+    
+    .company-img {
+        max-width: 300px;
+        max-height: 150px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    ul {
+        margin-bottom: 0;
+        padding-top: $padding-experience;
+        padding-bottom: 30px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+
+    .experience-spacer {
+        color: #000000a6;
+    }
+
+    .jobskills {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .job-skills-images {
+            margin-left: 10%;
+            img {
+                padding: 3px;
+                width: 80px;
+            }
+
+        }
+
+        @media (min-width: 649px) {
+            .job-skills-images {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+

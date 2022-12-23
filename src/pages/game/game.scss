@@ -1,0 +1,65 @@
+$game-fullscreen-button-color: #1a1a1a;
+$game-fullscreen-button-text-color: #fff;
+
+
+.game-container {
+    background-color: #205081;
+}
+
+.game-container-padding {
+    padding: 10px 20px;;
+}
+
+.game-spacer {
+    height: 50px;
+}
+
+.game-fullscreen-button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.game-fullscreen-button {
+    width: 120px;
+    height: 40px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 8px;
+    background-color: $game-fullscreen-button-color;
+    color: $game-fullscreen-button-text-color;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    transition: transform 0.3s;
+    &:hover {
+        transform: scale(1.05);
+    }
+
+}
+
+.game-loading-screen {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading {
+    // display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+

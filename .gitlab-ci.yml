@@ -1,0 +1,27 @@
+image: node:14.19-alpine3.14
+
+before_script:
+  - npm i -g firebase-tools
+
+build:
+  stage: build
+  only:
+  - master
+  - firebase
+  script :
+  - npm install
+  - npm run build
+  artifacts:
+    paths:
+      - build/
+
+
+deploy_production:
+  stage: deploy
+  environment: Production
+  only:
+  - master
+  - firebase
+  script:
+  - firebase deploy --only functions hosting --token $FIREBASE_TOKEN
+  # - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --token $FIREBASE_TOKEN --only functions hosting

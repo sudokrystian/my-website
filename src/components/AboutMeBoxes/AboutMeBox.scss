@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+
+$margin-boxes: 5px;
+$padding-boxes: 30px;
+$boxes-color: #1a1a1a;
+
+.about-me-boxes {
+    padding: $padding-boxes;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #efefef;
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: unset;
+        width: 100%;
+        margin: 0;
+    }
+
+    .about-me-box {
+        background-color: $boxes-color;
+        text-align: center;
+        width: 50%;
+        height: 100%;
+        padding: $padding-boxes;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        font-family: "PT Sans", sans-serif;
+        margin: 1%;
+        transition: transform 0.3s;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    @media (min-width: 649px) {
+        .about-me-box {
+            width: 40%;
+        }
+    }
+}

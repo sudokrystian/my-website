@@ -1,0 +1,162 @@
+$padding-about: 15px;
+$padding-sides: 100px;
+$padding-sides-mobile: 20px;
+$hr-color: #616161;
+$fashion-girl-color: #f00088;
+$look-perfect-color: #4fc4c7;
+$unolaan-color: #1c9d9b;
+$vialaan-color: #3498dB;
+
+.about-div {
+  padding: 70px 0;
+  // height: 100%;
+
+  .about-title {
+    text-align: center;
+  }
+
+  #introduction-div {
+    @media (max-width: 648px) {
+      padding: $padding-about $padding-sides-mobile;
+
+    }
+    @media (min-width: 649px) {
+      padding: $padding-about $padding-sides;
+    }
+  }
+
+  #experience-div {
+    @media (max-width: 648px) {
+      padding: 0 $padding-sides-mobile;
+
+    }
+    @media (min-width: 649px) {
+      padding: 0 $padding-sides;
+    }
+
+    .company-img {
+      max-width: 300px;
+      max-height: 150px;
+      padding-left: 30px;
+      padding-bottom: $padding-about;
+    }
+
+    @media (max-width: 648px) {
+      .experience-job {
+        padding-bottom: 20px;
+      }
+    }
+
+    @media (min-width: 649px) {
+      .experience-jobs {
+        display: flex;
+        justify-content: center;
+
+        .experience-job {
+          flex-basis: 33%;
+          padding: 0 20px;
+        }
+      }
+    }
+
+    .bold-600 {
+      font-weight: 600;
+    }
+
+    #fashiongirl-link {
+      color: $fashion-girl-color;
+    }
+    #lookperfect-link {
+      color: $look-perfect-color;
+    }
+    #unolaan-link {
+      color: $unolaan-color;
+    }
+    #vialaan-link {
+      color: $vialaan-color;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+  }
+
+  #skills-div {
+    @media (max-width: 648px) {
+      padding: 0px $padding-sides-mobile;
+    }
+    @media (min-width: 649px) {
+      padding: 0px $padding-sides;
+  
+    }
+
+    .skillboxes-div {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  #education-div {
+    @media (max-width: 648px) {
+      padding: 0 $padding-sides-mobile;
+    }
+    @media (min-width: 649px) {
+      padding: 0 $padding-sides;
+    }
+
+    .education-image {
+      width: 250px;
+      height: 125px;
+      object-fit: contain;
+    }
+
+    .education-header {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: $padding-about;
+
+      h6 {
+        font-size: 24px;
+        padding-right: $padding-about;
+        margin-bottom: 5px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    @media (min-width: 649px) {
+      .education-containers {
+        display: flex;
+
+        .education-container {
+          flex-basis: 33%;
+          padding: 0 20px;
+
+          .education-header {
+            display: flex;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 648px) {
+      .education-container {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  #hobbies-div {
+    @media (max-width: 648px) {
+      padding: 0px $padding-sides-mobile;
+    }
+    @media (min-width: 649px) {
+      padding: 0px $padding-sides;
+    }
+  }
+}

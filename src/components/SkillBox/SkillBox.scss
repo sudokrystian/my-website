@@ -1,0 +1,17 @@
+$skillbox-color: #205081;
+$skillbox-text-color: #fff;
+
+.skillbox {
+    border-radius: 8px;
+    background-color: $skillbox-color;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    margin: 6px;
+}
+
+.skillbox-text {
+    color: $skillbox-text-color;
+    padding: 5px 10px;
+    margin: auto;
+}

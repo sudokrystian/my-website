@@ -1,0 +1,35 @@
+$padding-contact: 15px;
+$padding-sides: 100px;
+$padding-sides-mobile: 20px;
+
+.contact-div {
+    @media (max-width: 648px) {
+        padding: 70px $padding-sides-mobile;
+    }
+    @media (min-width: 649px) {
+        padding: 70px $padding-sides;
+    }
+
+    .contact-title {
+        padding-top: $padding-contact;
+        text-align: center;
+    }
+
+    ul {
+        margin-top: 1em;
+    }
+
+    .bold-600 {
+        font-weight: 600;
+    }
+
+    .contact-linkedin {
+        color: #0077B5;
+    }
+    .contact-whatsapp {
+        color: #25D366;
+    }
+    .contact-messenger {
+        color: #00C6FF;
+    }
+}
