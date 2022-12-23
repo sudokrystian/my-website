@@ -110,7 +110,7 @@ a proper CI/CD than AWS or Azure, therefore I encourage to checkout the old yaml
 The website is a classic example of React component based application, that makes use of the best 
 functionalities like states. I hope you played with  the particles on the home page!`;
 
-const thisWebsiteProjectUrl = "https://gitlab.com/sudokrystian/my-website";
+const thisWebsiteProjectUrl = "https://github.com/sudokrystian/my-website";
 
 const thisWebsiteProject: ProjectData = {
   projectTitle: thisWebsiteProjectTitle,
