@@ -46,15 +46,14 @@ const About = () => {
         <h3 className="about-title">About me</h3>
         <hr />
         <p className="about-introduction">
-          My name is Krystian and I am a 24 year old software engineer. I am an
-          experienced full stack developer who loves improving software
-          efficiency and coming up with new solutions. Thanks to working with
-          different programming languages and frameworks in my previous
-          workplaces, I am used to acquiring new skills in a short period of
-          time. I highly appreciate discussing various solutions with my
-          teammates in order to help each other and improve our skills. Linux is
-          my favorite operating system, but I also don't mind using Windows or
-          MacOS. There are no unsolvable problems, only short deadlines.
+        Hi there! My name is Krystian and I am a software engineer with a passion for creating efficient and innovative solutions. 
+        I am 25 years old and have had the opportunity to work as a full stack developer in a variety of settings. This experience 
+        has allowed me to become comfortable with acquiring new skills and technologies in a short amount of time. One of the things 
+        I enjoy most about being a software engineer is the opportunity to work with a team to solve problems and improve processes. 
+        I believe that collaboration is key to success, and I always try to take the time to discuss different approaches and solutions 
+        with my teammates. Linux is my favorite operating system, but I also don't mind using Windows or MacOS. I believe there are no 
+        unsolvable problems, only short deadlines. I am always up for a challenge and strive to meet the expectations with the highest 
+        level of quality in my work.
         </p>
       </div>
       <Banner />
@@ -235,7 +234,7 @@ const About = () => {
         <ul>
           <li>Playing ukulele</li>
           <li>Fixing and riding my motorcycle</li>
-          <li>Philosophy (I am the head of philosophy panel in VIA Horsens)</li>
+          <li>Philosophy (I used to be the head of philosophy panel in VIA Horsens)</li>
           <li>
             Guidance of young, passionate minds (I am a mentor for first
             semester students)
@@ -244,10 +243,10 @@ const About = () => {
             Travelling (the main aim for my travels are beautiful hikes in
             nature and good food)
           </li>
-          <li>Board games (Catan is one of my favorites)</li>
+          <li>Board games</li>
           <li>
-            Computer games (strategy and RPG are the best to run away from
-            brutal reality)
+            Computer games (strategy and RPG are the best way to run away from
+            brutal reality from time to time)
           </li>
         </ul>
       </div>
