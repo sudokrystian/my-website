@@ -4,6 +4,7 @@ import SkillBox from "../../components/SkillBox/SkillBox";
 import "./about.scss";
 // Pictures
 import via from "../../assets/experience/via.png";
+import stibo from "../../assets/about/stibo_systems.png";
 import cern from "../../assets/experience/cern.png";
 import holme from "../../assets/experience/holmegroup.png";
 import maskinmesterskole from "../../assets/about/maskinmesterskole.png";
@@ -46,14 +47,20 @@ const About = () => {
         <h3 className="about-title">About me</h3>
         <hr />
         <p className="about-introduction">
-        Hi there! My name is Krystian and I am a software engineer with a passion for creating efficient and innovative solutions. 
-        I am 25 years old and have had the opportunity to work as a full stack developer in a variety of settings. This experience 
-        has allowed me to become comfortable with acquiring new skills and technologies in a short amount of time. One of the things 
-        I enjoy most about being a software engineer is the opportunity to work with a team to solve problems and improve processes. 
-        I believe that collaboration is key to success, and I always try to take the time to discuss different approaches and solutions 
-        with my teammates. Linux is my favorite operating system, but I also don't mind using Windows or MacOS. I believe there are no 
-        unsolvable problems, only short deadlines. I am always up for a challenge and strive to meet the expectations with the highest 
-        level of quality in my work.
+          Hi there! My name is Krystian and I am a software engineer with a
+          passion for creating efficient and innovative solutions. I am 25 years
+          old and have had the opportunity to work as a full stack developer in
+          a variety of settings. This experience has allowed me to become
+          comfortable with acquiring new skills and technologies in a short
+          amount of time. One of the things I enjoy most about being a software
+          engineer is the opportunity to work with a team to solve problems and
+          improve processes. I believe that collaboration is key to success, and
+          I always try to take the time to discuss different approaches and
+          solutions with my teammates. Linux is my favorite operating system,
+          but I also don't mind using Windows or MacOS. I believe there are no
+          unsolvable problems, only short deadlines. I am always up for a
+          challenge and strive to meet the expectations with the highest level
+          of quality in my work.
         </p>
       </div>
       <Banner />
@@ -70,23 +77,14 @@ const About = () => {
         <br />
         <div className="experience-jobs">
           <div className="experience-job">
-            <img
-              src={via}
-              alt="Via Univeristy Collage"
-              className="company-img"
-            />
+            <img src={stibo} alt="Stibo Systems" className="company-img" />
             <br />
-            <h5>VIA University College 09/2021 - now</h5>
-            <h6>Java student instructor and student guard</h6>
+            <h5>Stibo Systems 08/2022 - now</h5>
+            <h6>Full Stack Software Engineer</h6>
             <ul>
-              <li>
-                Teaching students the core concepts and design patterns in Java
-              </li>
-              <li>
-                Sharing knowledge about reading UML diagrams and interpreting
-                domain models
-              </li>
-              <li>Introducing alghoritms efficiency (Big O notation)</li>
+              <li>Designing and implementing systems in Java</li>
+              <li>Maintaining and supporting legacy applications</li>
+              <li>OSGI service delivery</li>
             </ul>
           </div>
           <div className="experience-job">
@@ -111,7 +109,7 @@ const About = () => {
           <div className="experience-job">
             <img src={holme} alt="Holme Group" className="company-img" />
             <h5>Holme Gruppen ASP 04/2019 - 08/2020</h5>
-            <h6>Full stack web developer, System Design</h6>
+            <h6>Full Stack web developer, System Design</h6>
             <ul>
               <li>
                 Maintnance and further development of the old systems with PHP
@@ -234,7 +232,10 @@ const About = () => {
         <ul>
           <li>Playing ukulele</li>
           <li>Fixing and riding my motorcycle</li>
-          <li>Philosophy (I used to be the head of philosophy panel in VIA Horsens)</li>
+          <li>
+            Philosophy (I used to be the head of philosophy panel in VIA
+            Horsens)
+          </li>
           <li>
             Guidance of young, passionate minds (I am a mentor for first
             semester students)
