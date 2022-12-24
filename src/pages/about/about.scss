@@ -26,6 +26,11 @@ $vialaan-color: #3498dB;
   }
 
   #experience-div {
+    
+    h5, h6 {
+      font-weight: bolder;
+    }
+
     @media (max-width: 648px) {
       padding: 0 $padding-sides-mobile;
 
