@@ -1,10 +1,20 @@
 import { useState } from "react";
-import { ReactComponent as CloseMenu } from "../../assets/x.svg";
-import { ReactComponent as MenuIcon } from "../../assets/menu.svg";
-import { BrowserRouter as Route, NavLink } from "react-router-dom";
-import RouterConfig from "../../RouterConfig";
-import logo from "../../assets/logo/SK_LOGO-02.svg"
+import CloseMenu from "../../assets/x.svg?react";
+import MenuIcon from "../../assets/menu.svg?react";
+// import { ReactComponent as CloseMenu } from "../../assets/x.svg?react";
+// import { ReactComponent as MenuIcon } from "../../assets/menu.svg?react";
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo/SK_LOGO-02.svg";
 import "./Header.scss";
+
+const navLinks = [
+  { to: "/", label: "Home" },
+  { to: "/about", label: "About" },
+  { to: "/experience", label: "Detailed work experience" },
+  { to: "/portfolio", label: "Portfolio" },
+  { to: "/game", label: "My game" },
+  { to: "/contact", label: "Contact" },
+];
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -17,40 +27,23 @@ const Header = () => {
         <div className="desktop">
           <div className="logo-container">
             <NavLink to="/" id="logo">
-              <img src={logo} alt="logo" className="logo"/>
+              <img src={logo} alt="logo" className="logo" />
             </NavLink>
           </div>
           <ul className={click ? "nav-options active" : "nav-options"}>
-            <li className="option" onClick={closeMobileMenu}>
-              <NavLink exact to="/" activeClassName="active-link">
-                Home
-              </NavLink>
-            </li>
-            <li className="option" onClick={closeMobileMenu}>
-              <NavLink to="/about" activeClassName="active-link">
-                About
-              </NavLink>
-            </li>
-            <li className="option" onClick={closeMobileMenu}>
-              <NavLink to="/experience" activeClassName="active-link">
-                Detailed work experience
-              </NavLink>
-            </li>
-            <li className="option" onClick={closeMobileMenu}>
-              <NavLink to="/portfolio" activeClassName="active-link">
-                Portfolio
-              </NavLink>
-            </li>
-            <li className="option" onClick={closeMobileMenu}>
-              <NavLink to="/game" activeClassName="active-link">
-                My game
-              </NavLink>
-            </li>
-            <li className="option" onClick={closeMobileMenu}>
-              <NavLink to="/contact" activeClassName="active-link">
-                Contact
-              </NavLink>
-            </li>
+            {navLinks.map(({ to, label }) => (
+              <li className="option" onClick={closeMobileMenu} key={to}>
+                <NavLink
+                  to={to}
+                  end={to === "/"}
+                  className={({ isActive }) =>
+                    isActive ? "active-link" : undefined
+                  }
+                >
+                  {label}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="mobile-menu" onClick={handleClick}>
@@ -61,7 +54,7 @@ const Header = () => {
           )}
         </div>
       </div>
-      <RouterConfig />
+      {/* The RouterConfig component should be rendered inside your main App, not inside Header */}
     </div>
   );
 };
