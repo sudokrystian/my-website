@@ -8,8 +8,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Lock files (pick one, see note below)
-package-lock.json
+# Lock files
 yarn.lock
 pnpm-lock.yaml
 
