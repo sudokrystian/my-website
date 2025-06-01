@@ -12,13 +12,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Clean npm cache and remove node_modules
+        run: |
+          rm -rf node_modules
+          npm cache clean --force
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22.15.1'
           cache: 'npm'
 
       - run: npm ci
-
       - run: npm run build
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
