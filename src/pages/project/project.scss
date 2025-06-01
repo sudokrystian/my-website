@@ -63,12 +63,12 @@ $image-width: 380px;
     }
 
     .project-content-text {
+      display: flex;
+      flex-direction: column;
+
       @media (min-width: 649px) {
         padding-left: 40px;
       }
-
-      display: flex;
-      flex-direction: column;
 
       .project-technologies {
         display: flex;
@@ -76,6 +76,7 @@ $image-width: 380px;
         align-items: center;
         flex-wrap: wrap;
         padding-bottom: 10px;
+
         @media (max-width: 648px) {
           padding-top: 15px;
             justify-content: center;

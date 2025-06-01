@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home/home";
 import About from "./pages/about/about";
 import Experience from "./pages/experience/experience";
@@ -10,30 +10,16 @@ import Game from "./pages/game/game";
 
 const RouterConfig = () => {
   return (
-    <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/about">
-        <About />
-      </Route>
-      <Route exact path="/experience">
-        <Experience />
-      </Route>
-      <Route exact path="/portfolio">
-        <Portfolio />
-      </Route>
-      <Route exact path="/contact">
-        <Contact />
-      </Route>
-      <Route exact path="/game">
-        <Game />
-      </Route>
-      <Route exact path="/project" component={Project}/>
-      <Route>
-        <Error />
-      </Route>
-    </Switch>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/experience" element={<Experience />} />
+      <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/game" element={<Game />} />
+      <Route path="/project" element={<Project />} />
+      <Route path="*" element={<Error />} />
+    </Routes>
   );
 };
 

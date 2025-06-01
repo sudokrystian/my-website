@@ -1,4 +1,4 @@
-import { BrowserRouter as Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 import projects from "../../pages/project/ProjectData";
 import SkillBox from "../SkillBox/SkillBox";
 import "./ProjectCard.scss";
@@ -8,12 +8,7 @@ const ProjectCard = (props: {
 }) => {
   return (
     <div className="project">
-      <NavLink
-        to={{
-          pathname: "/project",
-          state: props.projectIndex,
-        }}
-      >
+      <Link to="/project" className="project-link" state={props.projectIndex}>
         <div className="project-image-container">
           <img src={projects[props.projectIndex].projectImage} alt="Project" className="project-card-image"/>
           <div className="project-card-overlay">
@@ -25,7 +20,7 @@ const ProjectCard = (props: {
             </div>
           </div>
         </div>
-      </NavLink>
+      </Link>
     </div>
   );
 };

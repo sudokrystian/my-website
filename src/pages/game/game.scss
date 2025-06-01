@@ -43,6 +43,10 @@ $game-fullscreen-button-text-color: #fff;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    #game-spinner {
+        width: 50px;
+    }
 }
 
 #loading {
