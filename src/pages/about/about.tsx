@@ -4,7 +4,7 @@ import SkillBox from "../../components/SkillBox/SkillBox";
 import "./about.scss";
 // Pictures
 import via from "../../assets/experience/via.png";
-import stibo from "../../assets/about/stibo_systems.png";
+import stibo from "../../assets/about/stibo.png";
 import cern from "../../assets/experience/cern.png";
 import holme from "../../assets/experience/holmegroup.png";
 import maskinmesterskole from "../../assets/about/maskinmesterskole.png";
@@ -47,23 +47,41 @@ const About = () => {
         <h3 className="about-title">About me</h3>
         <hr />
         <p className="about-introduction">
-          Hi there! My name is Krystian and I am a software engineer with a
-          passion for creating efficient and innovative solutions. I am 25 years
-          old and have had the opportunity to work as a full stack developer in
-          a variety of settings. This experience has allowed me to become
-          comfortable with acquiring new skills and technologies in a short
-          amount of time. One of the things I enjoy most about being a software
-          engineer is the opportunity to work with a team to solve problems and
-          improve processes. I believe that collaboration is key to success, and
-          I always try to take the time to discuss different approaches and
-          solutions with my teammates. Linux is my favorite operating system,
-          but I also don't mind using Windows or MacOS. I believe there are no
-          unsolvable problems, only short deadlines. I am always up for a
-          challenge and strive to meet the expectations with the highest level
-          of quality in my work.
+          Hi, I’m Krystian—a backend-focused software engineer who loves making
+          things fast, reliable, and easy to use. My core playgrounds are Java,
+          Elasticsearch, Gradle, and React, but I’m always up for exploring new
+          tech that helps get the job done right. 🚀
+        </p>
+        <p>
+          I’ve worked everywhere from scrappy startups to some pretty unique
+          places (like CERN! 🧑‍🔬), and these days I’m deep in the corporate
+          world, focusing on master data management. My day-to-day usually
+          revolves around search performance—figuring out the right data
+          structures, squeezing out every bit of efficiency, and making sure
+          we’re always winning the Big O Notation game. ⚡
         </p>
       </div>
       <Banner />
+
+      <div id="introduction-div">
+        <p>
+          I enjoy mentoring junior devs, helping them tackle tricky problems,
+          and sharing what I’ve learned. Thanks to my experience across the
+          stack, I often end up being the go-between for backend, DevOps, and
+          deployment teams—making sure everyone’s on the same page and things
+          keep moving smoothly.
+        </p>
+        <p>
+          I’m a big fan of Linux 🐧, but I’m platform-agnostic and always happy
+          to pick up whatever tool works best. Outside of code, you’ll probably
+          find me at a beer or whiskey tasting with colleagues 🍻🥃, geeking out
+          about the latest in AI or quantum computing. 🤖⚛️
+        </p>
+        <p>
+          If you want to talk performance, data, or just debate the merits of
+          whiskey vs. beer, I’m always up for a good chat.😎
+        </p>
+      </div>
       <AboutMeBox
         experienceSectionId={experienceSectionId}
         skillsSectionId={skillsSectionId}
@@ -82,9 +100,16 @@ const About = () => {
             <h5>Stibo Systems 08/2022 - now</h5>
             <h6>Full Stack Software Engineer</h6>
             <ul>
-              <li>Designing and implementing systems in Java</li>
-              <li>Maintaining and supporting legacy applications</li>
-              <li>OSGI service delivery</li>
+              <li>
+                Building and optimizing search systems with Java and
+                Elasticsearch
+              </li>
+              <li>
+                Mentoring junior developers and designing solution architecture
+              </li>
+              <li>
+                Bridging backend, DevOps, and deployment teams across projects
+              </li>
             </ul>
           </div>
           <div className="experience-job">

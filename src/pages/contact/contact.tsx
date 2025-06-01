@@ -1,4 +1,4 @@
-import React from "react";
+import phone from "../../assets/my_pictures/new/phone.webp";
 import "./contact.scss";
 
 const Contact = () => {
@@ -46,6 +46,7 @@ const Contact = () => {
         </ul>
         I will get back to you as soon as possible.
       </p>
+      <img src={phone} alt="Call Me" />
     </div>
   );
 };

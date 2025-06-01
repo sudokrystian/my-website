@@ -5,9 +5,11 @@ $hr-color: #616161;
 $fashion-girl-color: #f00088;
 $look-perfect-color: #4fc4c7;
 $unolaan-color: #1c9d9b;
-$vialaan-color: #3498dB;
+$vialaan-color: #3498db;
 
 .about-div {
+  text-align: justify;
+  text-justify: inter-word;
   padding: 70px 0;
   // height: 100%;
 
@@ -18,7 +20,6 @@ $vialaan-color: #3498dB;
   #introduction-div {
     @media (max-width: 648px) {
       padding: $padding-about $padding-sides-mobile;
-
     }
     @media (min-width: 649px) {
       padding: $padding-about $padding-sides;
@@ -26,14 +27,13 @@ $vialaan-color: #3498dB;
   }
 
   #experience-div {
-    
-    h5, h6 {
+    h5,
+    h6 {
       font-weight: bolder;
     }
 
     @media (max-width: 648px) {
       padding: 0 $padding-sides-mobile;
-
     }
     @media (min-width: 649px) {
       padding: 0 $padding-sides;
@@ -44,6 +44,14 @@ $vialaan-color: #3498dB;
       max-height: 150px;
       padding-left: 30px;
       padding-bottom: $padding-about;
+    }
+
+    .experience-jobs {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
     }
 
     @media (max-width: 648px) {
@@ -82,7 +90,7 @@ $vialaan-color: #3498dB;
     }
 
     h6 {
-        font-size: 18px;
+      font-size: 18px;
     }
   }
 
@@ -92,7 +100,6 @@ $vialaan-color: #3498dB;
     }
     @media (min-width: 649px) {
       padding: 0px $padding-sides;
-  
     }
 
     .skillboxes-div {

@@ -1,4 +1,3 @@
-import React from "react";
 import "./SkillBox.scss";
 
 const SkillBox = (props: { boxText: string }) => {
