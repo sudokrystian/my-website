@@ -1,9 +1,9 @@
-import { useState } from "react";
-import helmet from "../../assets/my_pictures/helmet_CERN-min.jpg";
-import whiteboard from "../../assets/my_pictures/white_board_CERN-min.jpg";
-import reception from "../../assets/my_pictures/reception_cropped-min.jpg";
-import coding from "../../assets/my_pictures/coding_cropped-min.jpg";
-import peace from "../../assets/my_pictures/peace_CERN-min.jpg";
+import { useState, useEffect } from "react";
+import helmet from "../../assets/my_pictures/helmet_CERN-min.webp";
+import whiteboard from "../../assets/my_pictures/white_board_CERN-min.webp";
+import reception from "../../assets/my_pictures/reception_cropped-min.webp";
+import coding from "../../assets/my_pictures/coding_cropped-min.webp";
+import peace from "../../assets/my_pictures/peace_CERN-min.webp";
 import "./Banner.scss";
 
 const Banner = () => {
@@ -15,6 +15,13 @@ const Banner = () => {
     "headstrong",
     "communicative"
   ];
+
+    useEffect(() => {
+    pictures.forEach(src => {
+      const img = new window.Image();
+      img.src = src;
+    });
+  }, [pictures]);
 
   const [index, setIndex] = useState<number>(0);
 
