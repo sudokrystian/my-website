@@ -28,7 +28,8 @@ import php from "../../assets/experience/technologies/php.png";
 import gwt from "../../assets/experience/technologies/gwt.png";
 import osgi from "../../assets/experience/technologies/osgi.png";
 import svn from "../../assets/experience/technologies/svn.png";
-
+import elasticsearch from "../../assets/experience/technologies/elasticsearch.png";
+import git from "../../assets/experience/technologies/git.png";
 
 const Experience = () => {
   return (
@@ -40,88 +41,88 @@ const Experience = () => {
       <br />
       <h5>Sofware Enginner in Stibo Systems 08/2022 - now </h5>
       <p>
-        As a full time software engineer in Stibo Sytems I was responsible for quite a few things.
-        Not only were we developing new features for the Data Management System being sold
-        by the company, but also we were maintaining legacy code from early 2000's.
-        Stibo is using variety of technologies which let me futher expand my skillset.    
+        As a software engineer at Stibo Systems, I design and build new features
+        for our industry-leading Master Data Management platform, while also
+        diving into legacy code to keep critical systems running smoothly. My
+        daily toolkit includes Java, React, Elasticsearch, Gradle, and more,
+        giving me the chance to work across both modern and classic
+        technologies.
       </p>
       <div className="jobskills">
         <ul>
           <li>Java</li>
+          <li>Elasticsearch</li>
+          <li>Gradle</li>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>Python</li>
+          <li>Jenkins</li>
+          <li>git</li>
+          <li>Spring</li>
           <li>GWT</li>
           <li>Java Swing</li>
-          <li>Jenkins</li>
-          <li>Gradle</li>
           <li>OSGI</li>
-          <li>React</li>
-          <li>Typescript</li>
           <li>SVN</li>
         </ul>
         <div className="job-skills-images">
           <img src={java} alt="Java" />
+          <img src={elasticsearch} alt="Elasticsearch" />
+          <img src={gradle} alt="Gradle" />
+          <img src={react} alt="React" />
+          <img src={typescript} alt="TypeScript" />
+          <img src={python} alt="Python" />
+          <img src={jenkins} alt="Jenkins" />
+          <img src={git} alt="git" />
+          <img src={spring} alt="Spring" />
           <img src={gwt} alt="GWT" />
           <img src={swing} alt="Java Swing" />
-          <img src={jenkins} alt="Jenkins" />
-          <img src={gradle} alt="Gradle" />
           <img src={osgi} alt="OSGI" />
-          <img src={react} alt="react" />
-          <img src={typescript} alt="Typescript" />
           <img src={svn} alt="SVN" />
         </div>
       </div>
 
       <p>
-        Stibo Systems is an exciting place to work at. It deals with both new and old technologies, 
-        which forces engineers to keep their skillset updated, but also teaches them how to handle 
-        problems caused by legacy code. Stibo has a lot of custom solutions that are very complex
-        and require deep understanding of the inner workings of JVM and memory. In order to deal with
-        huge amount of data high level of memory optimization is required to makes user experience
-        as friendly as possible.
+        At Stibo, I mentor junior developers, shape solution architectures, and
+        bridge communication between backend, DevOps, and deployment teams. The
+        work is complex and rewarding—we handle massive datasets and push
+        performance to the limit, ensuring our data solutions deliver speed and
+        reliability at scale.
+        <br />
+        With deep dives into JVM internals, memory optimization, and the
+        challenges of supporting AI-driven data quality, Stibo Systems is a
+        place where learning never stops and every project sharpens your
+        technical edge.
       </p>
       <hr className="experience-spacer" />
       <br />
       <img src={via} alt="Via Univeristy Collage" className="company-img" />
       <h5>Student Instructor in VIA Horsens 09/2021 - 12/2021</h5>
       <p>
-        I was a part time Java instructor in VIA Univeristy College. I have learned
-        quite a few things in my job:
+        As a part-time Java instructor, I learned as much from my students as I
+        taught them. Inexperience doesn’t always mean being wrong—fresh
+        perspectives often surprised me and challenged my own ways of thinking.
+        It reminded me that even as someone who likes to think outside the box,
+        there’s always more room to grow.
       </p>
-      <ul>
-        <li>
-          Inexperienced doesn't necessarily mean wrong. Young minds that aren't
-          tainted by our programming paradigms and everday object oriented
-          thinking managed to surprise me more than once. Sometimes my students
-          were teaching me instead. Although I was always considering myself as
-          a person who is able to think out of the box, I was proved that there
-          is still huge room for improvement for me.
-        </li>
-        <li>
-          We programmers tend to be too technical. I noticed how many problems in
-          my job as a developer could have been prevented if only we worked more
-          on our communication. Sometimes 5 more minutes of a conversation and
-          additional explanation of the same thing from another perspective can
-          save hours of time.
-        </li>
-      </ul>
       <p>
-        Shaping young minds was extremely satisfying for me. I loved presenting
-        logical problems and hearing input from people with such a various
-        background. I was sharing my knowledge about the field with my students
-        and on every lesson I was reminding them how important is teamwork and
-        open mindness in our profession. I have ecnouraged them to work on their
-        own projects outside of the school curriculum, which resulted in quite
-        few passionate young game developers with a lot of potential.
+        Teaching showed me how important communication is in programming.
+        Sometimes, just five extra minutes of explanation or a different point
+        of view can save hours of confusion. I really enjoyed presenting logical
+        problems and hearing insights from students with diverse backgrounds. I
+        encouraged teamwork, open-mindedness, and independent projects, and was
+        proud to see several students become passionate about game development
+        as a result.
       </p>
       <br />
       <h5>Student Guard in VIA Horsens 08/2021 - now</h5>
       <p>
-        I am a student guard in VIA Univeristy College. I am responsible for
-        helping students and external guests visiting our school. This job
-        allowed me to develop my people skills even further. Various backgrounds
-        and cultural differences tend to clash from time to time. Depending on
-        the approach it can result in conflict or in projects with a deep
-        insight thanks to different perspectives. Finding the best in people
-        taught me patience and appreciation of the differences in personalities.
+        As a student guard, I help both students and visitors at VIA University
+        College. This role has helped me further develop my people skills and
+        taught me a lot about patience and cultural awareness. Interacting with
+        people from many backgrounds, I’ve learned how different perspectives
+        can either cause conflict or lead to unique insights, depending on how
+        you approach them. Finding common ground and appreciating individual
+        differences has made me a better communicator and teammate.
       </p>
       <hr className="experience-spacer" />
       <br />
@@ -169,12 +170,12 @@ const Experience = () => {
         that provide this functionality make sure that the versioning and
         documentation are in order, and then proceed to test the codebase and
         deploy it to both Jfrog artifactory and the CERN Network File System. It
-        is a huge project, which focuses on extendability and ease of maintnance.
-        Thanks to separating functionalities into small plugins, developers
-        don't have to use the entire distirbution, but they can pick only the
-        desired plugins in order to keep their projects lightweight. The version
-        of CBNG that I have developed is based on the Gradle distirbution
-        version 7.
+        is a huge project, which focuses on extendability and ease of
+        maintnance. Thanks to separating functionalities into small plugins,
+        developers don't have to use the entire distirbution, but they can pick
+        only the desired plugins in order to keep their projects lightweight.
+        The version of CBNG that I have developed is based on the Gradle
+        distirbution version 7.
       </p>
       <br />
       <h6>

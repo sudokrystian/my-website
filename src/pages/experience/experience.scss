@@ -3,6 +3,9 @@ $padding-sides: 100px;
 $padding-sides-mobile: 20px;
 
 .experience-div {
+    text-align: justify;
+    text-justify: inter-word;
+
     @media (max-width: 648px) {
         padding: 70px $padding-sides-mobile;
     }
@@ -26,6 +29,9 @@ $padding-sides-mobile: 20px;
     }
 
     ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
         margin-bottom: 0;
         padding-top: $padding-experience;
         padding-bottom: 30px;
@@ -33,6 +39,11 @@ $padding-sides-mobile: 20px;
 
     h6 {
         font-size: 18px;
+    }
+
+    h5 {
+        font-weight: bolder;
+        font-size: 20px;
     }
 
     .experience-spacer {
