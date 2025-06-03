@@ -42,7 +42,7 @@ Plus, building games sharpens my skills in algorithms, UX, and high-performance 
 
 If you’re looking for a creative, reliable, and technically broad engineer for your team or project —
 **Let’s talk!**
-Check out my [CV](public/documents/CV.pdf), browse my [projects](#), or reach out via the contact form.
+Check out my [CV](src/assets/documents/CV.pdf), or reach out via the contact form.
 
 ---
 
