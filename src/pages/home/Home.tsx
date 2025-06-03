@@ -1,8 +1,9 @@
 import "./home.scss";
 import MyParticles from "../../components/particles/MyParticles";
+import MyParticles2 from "../../components/";
+
 import cv from "../../assets/documents/CV.pdf";
-import ghibli from "../../assets/my_pictures/new/ghibli.png";
-import ghibli2 from "../../assets/my_pictures/new/ghibli2.png";
+import ghibli from "../../assets/my_pictures/new/ghibli.webp";
 
 
 
