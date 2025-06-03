@@ -3,10 +3,10 @@ import About from "./pages/about/About";
 import Experience from "./pages/experience/Experience";
 import Contact from "./pages/contact/Contact";
 import Error from "./pages/error/Error";
-import Home from "./pages/home/home";
-import Portfolio from "./pages/portfolio/portfolio";
+import Home from "./pages/home/Home";
+import Portfolio from "./pages/portfolio/Portfolio";
 import Game from "./pages/games/froggers-game/FroggersGame";
-import Project from "./pages/project/project";
+import Project from "./pages/project/Project";
 
 const RouterConfig = () => {
   return (
