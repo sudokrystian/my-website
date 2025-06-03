@@ -1,12 +1,12 @@
 import { Routes, Route } from "react-router-dom";
+import About from "./pages/about/About";
+import Experience from "./pages/experience/Experience";
+import Contact from "./pages/contact/Contact";
+import Error from "./pages/error/Error";
 import Home from "./pages/home/home";
-import About from "./pages/about/about";
-import Experience from "./pages/experience/experience";
 import Portfolio from "./pages/portfolio/portfolio";
-import Contact from "./pages/contact/contact";
+import Game from "./pages/games/froggers-game/FroggersGame";
 import Project from "./pages/project/project";
-import Error from "./pages/error/error";
-import Game from "./pages/game/game";
 
 const RouterConfig = () => {
   return (

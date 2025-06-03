@@ -1,4 +1,4 @@
-import "./SkillBox.scss";
+import "./skill-box.scss";
 
 const SkillBox = (props: { boxText: string }) => {
   return (

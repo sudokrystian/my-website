@@ -1,28 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import projects from "./ProjectData";
-import SkillBox from "../../components/SkillBox/SkillBox";
+import SkillBox from "../../components/skill-box/SkillBox";
 import git from "../../assets/my_projects/git.png";
 import "./project.scss";
 
 const Project = () => {
-  const indexParam: number = useLocation<number>().state;
+  const location = useLocation();
+  const indexParam = typeof location.state === "number" ? location.state : 0;
   const [index, setIndex] = useState<number>(indexParam);
 
   function getNextProject() {
-    if (index !== projects.length - 1) {
-      setIndex(index + 1);
-    } else {
-      setIndex(0);
-    }
+    setIndex((prev) => (prev !== projects.length - 1 ? prev + 1 : 0));
   }
 
   function getPreviousProject() {
-    if (index !== 0) {
-      setIndex(index - 1);
-    } else {
-      setIndex(projects.length - 1);
-    }
+    setIndex((prev) => (prev !== 0 ? prev - 1 : projects.length - 1));
+  }
+
+  if (index < 0 || index >= projects.length) {
+    return <div>Project not found.</div>;
   }
 
   return (

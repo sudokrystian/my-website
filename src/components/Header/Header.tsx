@@ -3,7 +3,7 @@ import CloseMenu from "../../assets/x.svg?react";
 import MenuIcon from "../../assets/menu.svg?react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo/SK_LOGO-02.svg";
-import "./Header.scss";
+import "./header.scss";
 
 const navLinks = [
   { to: "/", label: "Home" },

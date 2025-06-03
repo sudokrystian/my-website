@@ -1,6 +1,6 @@
-import AboutMeBox from "../../components/AboutMeBoxes/AboutMeBox";
-import Banner from "../../components/Banner/Banner";
-import SkillBox from "../../components/SkillBox/SkillBox";
+import AboutMeBox from "../../components/about-me-boxes/AboutMeBox";
+import Banner from "../../components/banner/Banner";
+import SkillBox from "../../components/skill-box/SkillBox";
 import "./about.scss";
 // Pictures
 import via from "../../assets/experience/via.png";

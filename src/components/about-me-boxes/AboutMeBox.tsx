@@ -1,4 +1,4 @@
-import "./AboutMeBox.scss";
+import "./about-me-box.scss";
 
 const AboutMeBox = (props: {
   experienceSectionId: string | URL | undefined;

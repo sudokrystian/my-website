@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Unity, useUnityContext } from "react-unity-webgl";
-import loadingSpinner from "../../assets/loadingSpinner.gif";
-import "./game.scss";
+import loadingSpinner from "../../../assets/loading-spinner.gif";
+import "./froggers-game.scss";
 
 const unityConfig = {
   loaderUrl: "unityBuild/froggersBeta.loader.js",
@@ -15,7 +15,13 @@ const Game = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const isMobile = width <= 768;
 
-  const { unityProvider, isLoaded: unityIsLoaded, requestFullscreen, addEventListener, removeEventListener } = useUnityContext(unityConfig);
+  const {
+    unityProvider,
+    isLoaded: unityIsLoaded,
+    requestFullscreen,
+    addEventListener,
+    removeEventListener,
+  } = useUnityContext(unityConfig);
 
   useEffect(() => {
     function handleWindowSizeChange() {
@@ -39,7 +45,9 @@ const Game = () => {
     requestFullscreen(true);
   }
 
-  const containerClassName = isMobile ? "game-container-padding" : "game-container";
+  const containerClassName = isMobile
+    ? "game-container-padding"
+    : "game-container";
 
   return (
     <div className={containerClassName}>
@@ -50,7 +58,10 @@ const Game = () => {
         <>
           {unityIsLoaded ? (
             <div className="game-fullscreen-button-container">
-              <button className="game-fullscreen-button" onClick={gameFullscreen}>
+              <button
+                className="game-fullscreen-button"
+                onClick={gameFullscreen}
+              >
                 Fullscreen
               </button>
             </div>

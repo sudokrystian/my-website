@@ -1,6 +1,6 @@
-import Header from './components/Header/Header';
+import Header from './components/header/Header';
 import RouterConfig from './RouterConfig';
-import Footer from './components/Footer/Footer';
+import Footer from './components/footer/Footer';
 
 const App = () => (
   <>

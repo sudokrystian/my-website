@@ -4,7 +4,7 @@ import iceland from "../../assets/my_pictures/new/iceland.webp";
 import sea from "../../assets/my_pictures/new/sea.webp";
 import beer from "../../assets/my_pictures/new/beer.webp";
 import cave from "../../assets/my_pictures/new/cave.webp";
-import "./Banner.scss";
+import "./banner.scss";
 
 const Banner = () => {
   const pictures: string[] = [kluska, sea, beer, iceland, cave];
