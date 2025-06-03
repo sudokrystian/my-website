@@ -1,63 +1,125 @@
-$boxes-color: #1a1a1a;
-$text-color: #000000;
-$button-text-color: #fff;
-
-
-.home-div {
-    width: 100%;
-
-    .canvas-absolute {
-        // background-color: #000;
-        z-index: 1;
-        margin-bottom: 40px;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 90px);
-    }
-    
-    .welcome-div {
-        position: absolute;
-        top: 25%;
-        z-index: 2;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;    
-        color: $text-color;
-        padding: 10px 15px;
-        background-color: rgba(255, 255, 255, 0.705);
-    
-        h4 {
-            text-align: center;
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-
-    }
-    .cv-button {
-        width: 180px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        border-radius: 8px;
-        background-color: $boxes-color;
-        color: $button-text-color;
-        box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-        transition: transform 0.3s;
-        &:hover {
-            transform: scale(1.05);
-        }
-
-
-        .download-icon {
-            padding-left: 10px;
-        }
-    }
+.home-root {
+  position: relative;
+  min-height: 100vh;
+  max-height: 100vh; // Prevent scroll on desktop
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
 }
 
+.welcome-section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  height: 100%; // ensure fill
+}
 
+.welcome-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem; // even more space
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.80);
+  border-radius: 1.7rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+  padding: 2.5rem 2.2rem;
+}
+
+.welcome-img {
+  width: 240px;      // Larger image!
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(32,80,129,0.10);
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.welcome-text h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #205081;
+}
+
+.welcome-text p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #233241;
+}
+
+.cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #205081;            // Explicit background!
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.18rem;
+  font-weight: 600;
+  padding: 0.85rem 2.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(32,80,129,0.09);
+  transition: background 0.18s, color 0.18s;
+  margin-top: 0.5rem;
+
+  &:hover,
+  &:focus {
+    background: #174061;
+    color: #fff;
+  }
+  .download-icon {
+    font-size: 1.35rem;
+    margin-left: 0.3rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .welcome-row {
+    gap: 2rem;
+    padding: 2rem 0.7rem;
+    max-width: 95vw;
+  }
+  .welcome-img {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 700px) {
+  .welcome-row {
+    flex-direction: column;
+    gap: 1.3rem;
+    padding: 1.3rem 0.4rem;
+    max-width: 100vw;
+  }
+  .welcome-text h1 {
+    font-size: 1.4rem;
+  }
+  .cv-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
 
