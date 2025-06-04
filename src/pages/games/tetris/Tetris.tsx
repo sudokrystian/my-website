@@ -218,7 +218,7 @@ const move = (dx: number, dy: number) => {
             <button onClick={() => handleMobileMove("left")}>◀️</button>
             <button onClick={() => handleMobileMove("down")}>🔽</button>
             <button onClick={() => handleMobileMove("right")}>▶️</button>
-            <button onClick={() => handleMobileMove("rotate")}>⟳</button>
+            <button onClick={() => handleMobileMove("rotate")}>🔄</button>
           </div>
         </div>
       </div>
