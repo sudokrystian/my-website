@@ -7,6 +7,7 @@ import Home from "./pages/home/Home";
 import Portfolio from "./pages/portfolio/Portfolio";
 import Game from "./pages/games/froggers-game/FroggersGame";
 import Project from "./pages/project/Project";
+import Tetris from "./pages/games/tetris/Tetris";
 
 const RouterConfig = () => {
   return (
@@ -16,6 +17,7 @@ const RouterConfig = () => {
       <Route path="/experience" element={<Experience />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/tetris" element={<Tetris />} />
       <Route path="/game" element={<Game />} />
       <Route path="/project" element={<Project />} />
       <Route path="*" element={<Error />} />

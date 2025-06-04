@@ -28,18 +28,18 @@
   gap: 4rem; // even more space
   max-width: 1000px;
   margin: 0 auto;
-  background: rgba(255,255,255,0.80);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 1.7rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
   padding: 2.5rem 2.2rem;
 }
 
 .welcome-img {
-  width: 240px;      // Larger image!
+  width: 240px; // Larger image!
   height: 240px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(32,80,129,0.10);
+  box-shadow: 0 4px 16px rgba(32, 80, 129, 0.1);
   background: #fff;
   flex-shrink: 0;
 }
@@ -49,48 +49,78 @@
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-}
-
-.welcome-text h1 {
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem 0;
-  color: #205081;
-}
-
-.welcome-text p {
-  font-size: 1.15rem;
-  line-height: 1.6;
-  margin: 0;
-  color: #233241;
-}
-
-.cv-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: #205081;            // Explicit background!
-  color: #fff;
-  border: none;
-  border-radius: 2rem;
-  font-size: 1.18rem;
-  font-weight: 600;
-  padding: 0.85rem 2.1rem;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(32,80,129,0.09);
-  transition: background 0.18s, color 0.18s;
-  margin-top: 0.5rem;
-
-  &:hover,
-  &:focus {
-    background: #174061;
-    color: #fff;
+  h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: #205081;
   }
-  .download-icon {
-    font-size: 1.35rem;
-    margin-left: 0.3rem;
+  p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #233241;
+  }
+
+  .home-buttons {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .tetris-button {
+    background: linear-gradient(90deg, #2eccff, #00ff99);
+    color: #222;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 0.9rem 2.1rem;
+    box-shadow: 0 3px 20px 0 rgba(40, 180, 255, 0.11);
+    transition: transform 0.16s, box-shadow 0.22s, background 0.22s;
+    cursor: pointer;
+    letter-spacing: 0.04em;
     display: flex;
     align-items: center;
+    gap: 0.6em;
+    height: 100%;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 8px 36px 0 rgba(0, 255, 200, 0.22);
+      background: linear-gradient(90deg, #00ff99, #2eccff);
+      color: #111;
+      outline: none;
+    }
+  }
+
+  .cv-button {
+    background: linear-gradient(90deg, #36618d 0%, #205081 100%);
+    color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    font-size: 1.08rem;
+    font-weight: 600;
+    padding: 0.9rem 2.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    box-shadow: 0 3px 20px 0 rgba(54, 97, 141, 0.13);
+    transition: transform 0.16s, box-shadow 0.22s, background 0.22s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(90deg, #205081 0%, #36618d 100%);
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 8px 36px 0 rgba(54, 97, 141, 0.22);
+      outline: none;
+    }
+
+    .download-icon {
+      font-size: 1.2em;
+    }
   }
 }
 
@@ -117,9 +147,17 @@
   .welcome-text h1 {
     font-size: 1.4rem;
   }
-  .cv-button {
-    width: 100%;
-    justify-content: center;
+  .home-buttons {
+    flex-direction: column;
+    gap: 1rem;
+
+    .cv-button {
+      width: 100%;
+      justify-content: center;
+    }
+    .tetris-button {
+      width: 100%;
+      justify-content: center;
+    }
   }
 }
-
