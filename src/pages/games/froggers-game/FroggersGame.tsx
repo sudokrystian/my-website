@@ -45,27 +45,24 @@ const Game = () => {
     requestFullscreen(true);
   }
 
-  const containerClassName = isMobile
-    ? "game-container-padding"
-    : "game-container";
-
   return (
-    <div className={containerClassName}>
-      <div className="game-spacer"></div>
+    <div className="game-container">
       {isMobile ? (
         <h6>Unfortunately the game doesn't support mobile devices</h6>
       ) : (
         <>
-          {unityIsLoaded ? (
-            <div className="game-fullscreen-button-container">
-              <button
-                className="game-fullscreen-button"
-                onClick={gameFullscreen}
-              >
-                Fullscreen
-              </button>
-            </div>
-          ) : (
+          <div className="game-header-row">
+            <h3 className="froggers-game-title">Froggers</h3>
+            {unityIsLoaded && (
+              <div className="game-fullscreen-button-container">
+                <button className="game-fullscreen-button" onClick={gameFullscreen}>
+                  Fullscreen
+                </button>
+              </div>
+            )}
+          </div>
+          <hr className="game-header-hr" />
+          {unityIsLoaded ? null : (
             <div className="game-loading-screen">
               <h6>Game is loading please wait...</h6>
               <br />
