@@ -10,7 +10,7 @@ const navLinks = [
   { to: "/about", label: "About" },
   { to: "/experience", label: "Work experience" },
   { to: "/portfolio", label: "Portfolio" },
-  { to: "/game", label: "My game" },
+  { to: "/games", label: "My game" },
   { to: "/contact", label: "Contact" },
 ];
 

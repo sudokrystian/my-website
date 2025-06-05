@@ -5,7 +5,8 @@ import Contact from "./pages/contact/Contact";
 import Error from "./pages/error/Error";
 import Home from "./pages/home/Home";
 import Portfolio from "./pages/portfolio/Portfolio";
-import Game from "./pages/games/froggers-game/FroggersGame";
+import FroggersGame from "./pages/games/froggers-game/FroggersGame";
+import Games from "./pages/games/games";
 import Project from "./pages/project/Project";
 import Tetris from "./pages/games/tetris/Tetris";
 
@@ -18,7 +19,8 @@ const RouterConfig = () => {
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/tetris" element={<Tetris />} />
-      <Route path="/game" element={<Game />} />
+      <Route path="/games" element={<Games />} />
+      <Route path="/froggers" element={<FroggersGame />} />
       <Route path="/project" element={<Project />} />
       <Route path="*" element={<Error />} />
     </Routes>
