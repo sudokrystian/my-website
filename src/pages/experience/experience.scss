@@ -3,75 +3,171 @@ $padding-sides: 100px;
 $padding-sides-mobile: 20px;
 
 .experience-div {
-    text-align: justify;
-    text-justify: inter-word;
+  text-align: justify;
+  text-justify: inter-word;
 
-    @media (max-width: 648px) {
-        padding: 70px $padding-sides-mobile;
-    }
-    @media (min-width: 649px) {
-        padding: 70px $padding-sides;
-    }
+  .about-highlight {
+    background: #e6f0fa;
+    border-radius: 0.5em;
+    padding: 0 0.22em;
+    font-weight: 600;
+    color: #205081;
+    display: inline-block;
+    margin: 0 0.09em;
+    line-height: 1.2;
+    transition: background 0.16s;
+  }
 
-    .experience-title {
-        padding-top: $padding-experience;
-        text-align: center;
+  .workexp-job-card {
+    background: #fff;
+    border-radius: 1.6em;
+    box-shadow: 0 4px 24px -10px #20508113;
+    padding: 2.3rem 2rem 1.7rem 2rem;
+    margin-bottom: 2.5rem;
+    transition: box-shadow 0.2s;
+    word-break: break-word;
+
+    &:hover,
+    &:focus-within {
+      box-shadow: 0 8px 32px -8px #20508124;
     }
-    
+  }
+
+  .workexp-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    margin-bottom: 1rem;
+
     .company-img {
-        max-width: 300px;
-        max-height: 150px;
-        padding-bottom: 10px;
-    }
-
-    p {
-        margin-bottom: 0;
-    }
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        margin-bottom: 0;
-        padding-top: $padding-experience;
-        padding-bottom: 30px;
-    }
-
-    h6 {
-        font-size: 18px;
+      max-width: 150px;
+      max-height: 80px;
+      object-fit: contain;
+      flex-shrink: 0;
+      width: auto;
+      height: auto;
+      display: block;
     }
 
     h5 {
-        font-weight: bolder;
-        font-size: 20px;
+      font-size: 1.32rem;
+      font-weight: 700;
+      color: #205081;
+      margin: 0;
     }
-
-    .experience-spacer {
-        color: #000000a6;
+    .job-date {
+      font-size: 1.01rem;
+      color: #9fa4af;
+      font-weight: 500;
+      margin-left: 0.1em;
+      display: block;
     }
-
-    .jobskills {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        .job-skills-images {
-            margin-left: 10%;
-            img {
-                padding: 3px;
-                width: 80px;
-            }
-
-        }
-
-        @media (min-width: 649px) {
-            .job-skills-images {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                flex-wrap: wrap;
-            }
-        }
+    .job-role {
+      font-size: 1.11rem;
+      color: #212326cc;
+      font-weight: 500;
+      margin-top: 0.18em;
     }
+  }
+
+  .workexp-section {
+    margin-bottom: 1.2rem;
+
+    h6 {
+      font-size: 1.09em;
+      font-weight: 600;
+      margin-bottom: 0.3em;
+      color: #205081;
+      letter-spacing: -0.01em;
+    }
+    p,
+    ul {
+      max-width: 48em;
+    }
+  }
+
+  .job-skills-images {
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7em;
+
+    img {
+      max-width: 150px;
+      max-height: 150px;
+      width: 80px;
+      height: auto;
+      object-fit: contain;
+      padding: 4px;
+      border-radius: 0.7em;
+      background: #f7faff;
+      box-shadow: 0 1px 5px #20508111;
+      transition: box-shadow 0.18s;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 2px 14px #20508122;
+      }
+    }
+  }
+
+  // Responsive padding
+  @media (max-width: 648px) {
+    padding: 70px $padding-sides-mobile;
+
+    .job-skills-images {
+      margin-left: 0;
+      justify-content: flex-start;
+      gap: 0.4em;
+      img {
+        width: 54px;
+        max-width: 90px;
+        max-height: 90px;
+      }
+    }
+    .workexp-job-card {
+      padding: 1.2rem 0.3rem 1rem 0.3rem;
+    }
+    .workexp-card-header .company-img {
+      max-width: 70px;
+      max-height: 36px;
+    }
+  }
+
+  @media (min-width: 649px) {
+    padding: 70px $padding-sides;
+  }
+
+  .experience-title {
+    padding-top: $padding-experience;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 0;
+    padding-top: $padding-experience;
+    padding-bottom: 30px;
+  }
+
+  h6 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-weight: bolder;
+    font-size: 20px;
+  }
+
+  .experience-spacer {
+    color: #000000a6;
+  }
 }
-

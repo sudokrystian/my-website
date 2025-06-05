@@ -8,7 +8,7 @@ import "./header.scss";
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/experience", label: "Detailed work experience" },
+  { to: "/experience", label: "Work experience" },
   { to: "/portfolio", label: "Portfolio" },
   { to: "/game", label: "My game" },
   { to: "/contact", label: "Contact" },

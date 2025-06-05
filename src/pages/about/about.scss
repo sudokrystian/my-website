@@ -16,8 +16,6 @@ $font-size: 20px;
     position: relative;
     padding-left: 1.3em; // give the chevron space
     margin-bottom: 0.7em;
-    line-height: 1.6;
-    font-size: 1.05em;
     color: #232326;
 
     &:before {
@@ -36,18 +34,6 @@ $font-size: 20px;
       pointer-events: none;
       user-select: none;
     }
-  }
-
-  .about-me-block,
-  .about-me-block p,
-  .about-me-block ul,
-  .about-me-block li {
-    font-family: inherit; // or your global body font, e.g. 'Inter', sans-serif;
-    font-size: $font-size;
-    line-height: 1.6;
-    font-weight: 400;
-    letter-spacing: 0; // can adjust if you want more air
-    color: #232326;
   }
 
   .about-me-block {
