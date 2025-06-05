@@ -1,7 +1,7 @@
 import StarWars from "../assets/my_projects/star_wars_login.jpg";
 import movietoo from "../assets/my_projects/movietoo-min.png";
 import api from "../assets/my_projects/api.jpg";
-import this_website from "../assets/my_projects/this_website.png";
+import myWebiste from "../assets/my_projects/my-website.webp";
 import embedded from "../assets/my_projects/embedded.jpg";
 import jpa from "../assets/my_projects/jpa.png";
 import scrum from "../assets/my_projects/scrum.png";
@@ -114,7 +114,7 @@ const thisWebsiteProjectUrl = "https://github.com/sudokrystian/my-website";
 
 const thisWebsiteProject: ProjectData = {
   projectTitle: thisWebsiteProjectTitle,
-  projectImage: this_website,
+  projectImage: myWebiste,
   projectDescription: thisWebsiteProjectDescription,
   projectTechnologies: thisWebsiteProjectTechnologies,
   projectUrl: thisWebsiteProjectUrl,

@@ -2,31 +2,53 @@ $padding-portfolio: 15px;
 $cards-spacing: 30px;
 
 .portfolio-div {
-    padding: 70px $padding-portfolio 0 $padding-portfolio;
+  position: relative;
+  padding: 110px $padding-portfolio 0 $padding-portfolio; // adjust for navbar + header height
 
-    .portfolio-title {
-        padding-top: $padding-portfolio;
-        text-align: center;
+  .portfolio-header {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(32, 80, 129, 0.08);
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    margin: 0 auto 1.5rem auto;
+    width: 100%;
+    max-width: none;
+  }
+
+  .portfolio-title {
+    padding-top: $padding-portfolio;
+    text-align: center;
+  }
+
+  .portfolio-projects {
+    padding-top: 2.8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    > * {
+      margin: $cards-spacing $cards-spacing;
     }
 
-    .portfolio-projects {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        > * {
-            margin: $cards-spacing $cards-spacing;
-        }
-
-        @media (max-width: 648px) {
-            flex-direction: column;
-            align-items: center;
-
-            > * {
-                margin: $cards-spacing 0px;
-            }
-        }
-
-
+    .canvas-absolute {
+        margin: 0;
     }
+
+    @media (max-width: 900px) {
+      padding-top: 1.2em;
+    }
+    @media (max-width: 648px) {
+      padding-top: 0em;
+      flex-direction: column;
+      align-items: center;
+
+      > * {
+        margin: $cards-spacing 0px;
+      }
+    }
+  }
 }
