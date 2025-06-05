@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import projects from "./ProjectData";
+import projects from "../../constants/projectData";
 import SkillBox from "../../components/skill-box/SkillBox";
 import git from "../../assets/my_projects/git.png";
+import { techIcons } from "../../constants/techIcons";
+import { FaQuestion } from "react-icons/fa";
 import "./project.scss";
 
 const Project = () => {
@@ -43,10 +45,24 @@ const Project = () => {
         </a>
 
         <div className="project-content-text">
-          <div className="project-technologies">
-            {projects[index].projectTechnologies.map((technology) => (
-              <SkillBox boxText={technology} key={technology} />
-            ))}
+          <div className="project-technologies skills-grid">
+              {projects[index].projectTechnologies.map((tech, idx) => {
+                const techData = techIcons[tech];
+                const icon = techData && techData.icon ? techData.icon : FaQuestion;
+                const text = techData ? techData.text : tech;
+                const color = techData ? techData.color : undefined;
+                if (!techData) {
+                  console.warn(`Missing icon for tech: ${tech}`);
+                }
+                return (
+                  <SkillBox
+                    key={tech + "-" + idx}
+                    icon={icon}
+                    text={text}
+                    color={color}
+                  />
+                );
+              })}
           </div>
           <p className="project-description">
             {projects[index].projectDescription}

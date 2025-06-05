@@ -1,3 +1,35 @@
+import {
+  FaJava,
+  FaReact,
+  FaPhp,
+  FaPython,
+  FaJenkins,
+  FaAndroid,
+  FaGitAlt,
+  FaHtml5,
+  FaUnity,
+  FaSoap,
+} from "react-icons/fa";
+import {
+  SiDotnet,
+  SiGradle,
+  SiJavascript,
+  SiJquery,
+  SiAngular,
+  SiMysql,
+  SiPostgresql,
+  SiTypescript,
+  SiSpring,
+  SiApachegroovy,
+  SiKotlin,
+  SiSass,
+  SiGnubash,
+  SiElasticsearch,
+  SiTensorflow,
+} from "react-icons/si";
+
+import { GiArtificialIntelligence } from "react-icons/gi";
+
 import AboutMeBox from "../../components/about-me-boxes/AboutMeBox";
 import Banner from "../../components/banner/Banner";
 import SkillBox from "../../components/skill-box/SkillBox";
@@ -8,38 +40,14 @@ import stibo from "../../assets/about/stibo.png";
 import cern from "../../assets/experience/cern.png";
 import holme from "../../assets/experience/holmegroup.png";
 import maskinmesterskole from "../../assets/about/maskinmesterskole.png";
+import HobbiesSection from "../../components/hobbies-section/HobbiesSection";
+import { techIcons } from "../../constants/techIcons";
 
 const About = () => {
   const experienceSectionId = "experience-div";
   const skillsSectionId = "skills-div";
   const educationSectionId = "education-div";
   const hobbiesSectionId = "hobbies-div";
-
-  const skills: string[] = [
-    "Java",
-    "ReactJS",
-    "PHP",
-    ".NET",
-    "Python",
-    "Gradle plugins",
-    "JavaScript",
-    "JQuery",
-    "AngularJS",
-    "MySQL",
-    "PostgreSQL",
-    "Typescript",
-    "Jenkins",
-    "Android",
-    "Spring",
-    "Groovy",
-    "Kotlin",
-    "SCSS",
-    "Shell scripts",
-    "GIT",
-    "HTML",
-    "SOAP",
-    "Unity",
-  ];
 
   return (
     <div className="about-div">
@@ -201,9 +209,11 @@ const About = () => {
         <hr />
         <br />
         <div className="skillboxes-div">
-          {skills.map((skill) => (
-            <SkillBox boxText={skill} key={skill} />
-          ))}
+          <div className="skills-grid">
+            {Object.entries(techIcons).map(([key, { icon, text, color }]) => (
+              <SkillBox key={key} icon={icon} text={text} color={color} />
+            ))}
+          </div>
         </div>
       </div>
       <br />
@@ -249,32 +259,7 @@ const About = () => {
       <div id="hobbies-div">
         <h3>Hobbies</h3>
         <hr />
-        <p>
-          I am the kind of person who can't really sit still for a long time,
-          therefore I have many hobbies that keep me going. Here is a list of
-          some of my favorite ones.
-        </p>
-        <ul>
-          <li>Playing ukulele</li>
-          <li>Fixing and riding my motorcycle</li>
-          <li>
-            Philosophy (I used to be the head of philosophy panel in VIA
-            Horsens)
-          </li>
-          <li>
-            Guidance of young, passionate minds (I am a mentor for first
-            semester students)
-          </li>
-          <li>
-            Travelling (the main aim for my travels are beautiful hikes in
-            nature and good food)
-          </li>
-          <li>Board games</li>
-          <li>
-            Computer games (strategy and RPG are the best way to run away from
-            brutal reality from time to time)
-          </li>
-        </ul>
+        <HobbiesSection />
       </div>
     </div>
   );

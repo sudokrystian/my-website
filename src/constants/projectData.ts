@@ -1,12 +1,12 @@
-import StarWars from "../../assets/my_projects/star_wars_login.jpg";
-import movietoo from "../../assets/my_projects/movietoo-min.png";
-import api from "../../assets/my_projects/api.jpg";
-import this_website from "../../assets/my_projects/this_website.png";
-import embedded from "../../assets/my_projects/embedded.jpg";
-import jpa from "../../assets/my_projects/jpa.png";
-import scrum from "../../assets/my_projects/scrum.png";
-import spring from "../../assets/my_projects/spring.png";
-import froggers from "../../assets/my_projects/froggers.png";
+import StarWars from "../assets/my_projects/star_wars_login.jpg";
+import movietoo from "../assets/my_projects/movietoo-min.png";
+import api from "../assets/my_projects/api.jpg";
+import this_website from "../assets/my_projects/this_website.png";
+import embedded from "../assets/my_projects/embedded.jpg";
+import jpa from "../assets/my_projects/jpa.png";
+import scrum from "../assets/my_projects/scrum.png";
+import spring from "../assets/my_projects/spring.png";
+import froggers from "../assets/my_projects/froggers.png";
 
 export interface ProjectData {
   projectTitle: string;
@@ -48,7 +48,7 @@ const movietooProjectTechnologies = [
   "Angular",
   "TypeScript",
   "JWT",
-  "Azure Cloud",
+  "Azure Cloud"
 ];
 
 const movietooProjectDescription = `Azure cloud project that served as both a school project 
