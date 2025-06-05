@@ -1,17 +1,20 @@
 $game-fullscreen-button-color: #1a1a1a;
 $game-fullscreen-button-text-color: #fff;
 
-
-html, body, #root {
-  height: 100%;
-  overflow: hidden;
+#root {
+    min-height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 40px;
+    background-color: #fff;
 }
 
 .game-container, .game-container-padding {
   background-color: #fff;
-  min-height: 100vh;
+  // min-height: 95vh;
   max-height: 100vh;
-  height: 100vh;
+  // height: 95vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;

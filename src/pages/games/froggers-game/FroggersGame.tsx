@@ -10,7 +10,7 @@ const unityConfig = {
   codeUrl: "unityBuild/froggersBeta.wasm",
 };
 
-const Game = () => {
+const FroggersGame = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [isLoaded, setIsLoaded] = useState(false);
   const isMobile = width <= 768;
@@ -85,4 +85,4 @@ const Game = () => {
   );
 };
 
-export default Game;
+export default FroggersGame;
