@@ -1,20 +1,85 @@
 $padding-about: 15px;
 $padding-sides: 100px;
 $padding-sides-mobile: 20px;
-$hr-color: #616161;
-$fashion-girl-color: #f00088;
-$look-perfect-color: #4fc4c7;
-$unolaan-color: #1c9d9b;
-$vialaan-color: #3498db;
+$font-size: 20px;
 
 .about-div {
   text-align: justify;
   text-justify: inter-word;
   padding: 70px 0;
-  // height: 100%;
 
   .about-title {
     text-align: center;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1.3em; // give the chevron space
+    margin-bottom: 0.7em;
+    line-height: 1.6;
+    font-size: 1.05em;
+    color: #232326;
+
+    &:before {
+      content: "›";
+      color: #205081;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.17em;
+      font-weight: 700;
+      line-height: 1;
+      display: inline-block;
+      width: 1em;
+      text-align: center;
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+
+  .about-me-block,
+  .about-me-block p,
+  .about-me-block ul,
+  .about-me-block li {
+    font-family: inherit; // or your global body font, e.g. 'Inter', sans-serif;
+    font-size: $font-size;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0; // can adjust if you want more air
+    color: #232326;
+  }
+
+  .about-me-block {
+    margin-bottom: 2.2em;
+    h4 {
+      font-size: 1.18em;
+      font-weight: 600;
+      color: #205081;
+      margin-bottom: 0.5em;
+      letter-spacing: -0.01em;
+    }
+    p,
+    ul {
+      color: #232326;
+      margin-bottom: 0.5em;
+      line-height: 1.62;
+      max-width: 48em;
+    }
+  }
+
+  .about-highlight {
+    background: #e6f0fa;
+    border-radius: 0.6em;
+    padding: 0 0.3em;
+    font-weight: 600;
+    color: #205081;
+  }
+
+  .about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
   #introduction-div {
@@ -27,9 +92,102 @@ $vialaan-color: #3498db;
   }
 
   #experience-div {
-    h5,
-    h6 {
-      font-weight: bolder;
+    .experience-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .experience-job {
+      background: #fff;
+      border-radius: 1.6em;
+      box-shadow: 0 4px 24px -10px #20508115;
+      padding: 2.2rem 2rem 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      transition: box-shadow 0.2s;
+
+      &:hover,
+      &:focus-within {
+        box-shadow: 0 8px 32px -8px #20508133;
+      }
+    }
+
+    .experience-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 0.6rem;
+
+      h5 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin: 0;
+        color: #205081;
+      }
+      .job-date {
+        font-size: 1.01rem;
+        color: #9fa4af;
+        font-weight: 500;
+        margin-left: 0.1em;
+        display: block;
+      }
+      .job-role {
+        font-size: 1.08rem;
+        color: #212326cc;
+        font-weight: 500;
+        margin-top: 0.15em;
+      }
+      .company-img {
+        max-width: 300px;
+        max-height: 150px;
+        // width: 56px;
+        // height: 56px;
+        border-radius: 1.2em;
+        background: #f7faff;
+        // object-fit: contain;
+        box-shadow: 0 1px 7px #20508111;
+      }
+    }
+
+    .job-desc-list {
+      margin: 0 0 0 0.2rem;
+      padding: 0;
+      list-style: none;
+      li {
+        a.exp-link {
+          color: #205081;
+          font-weight: 600;
+          text-decoration: underline dotted;
+          margin: 0 0.2em;
+          transition: color 0.2s;
+          &:hover,
+          &:focus {
+            color: #308ad7;
+          }
+        }
+        .about-highlight {
+          // you already have this, just here for reference!
+          background: #e6f0fa;
+          border-radius: 0.5em;
+          padding: 0 0.22em;
+          font-weight: 600;
+          color: #205081;
+        }
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      .experience-job {
+        padding: 1.1rem 1rem;
+      }
+      .experience-card-header .company-img {
+        max-width: 100px;
+        // max-height: 150px;
+      }
     }
 
     @media (max-width: 648px) {
@@ -39,58 +197,10 @@ $vialaan-color: #3498db;
       padding: 0 $padding-sides;
     }
 
-    .company-img {
-      max-width: 300px;
-      max-height: 150px;
-      padding-left: 30px;
-      padding-bottom: $padding-about;
-    }
-
-    .experience-jobs {
-      ul {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-      }
-    }
-
     @media (max-width: 648px) {
       .experience-job {
         padding-bottom: 20px;
       }
-    }
-
-    @media (min-width: 649px) {
-      .experience-jobs {
-        display: flex;
-        justify-content: center;
-
-        .experience-job {
-          flex-basis: 33%;
-          padding: 0 20px;
-        }
-      }
-    }
-
-    .bold-600 {
-      font-weight: 600;
-    }
-
-    #fashiongirl-link {
-      color: $fashion-girl-color;
-    }
-    #lookperfect-link {
-      color: $look-perfect-color;
-    }
-    #unolaan-link {
-      color: $unolaan-color;
-    }
-    #vialaan-link {
-      color: $vialaan-color;
-    }
-
-    h6 {
-      font-size: 18px;
     }
   }
 
@@ -112,33 +222,135 @@ $vialaan-color: #3498db;
   }
 
   #education-div {
+    .education-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 1rem 0 1.5rem 0;
+      justify-content: flex-start;
+    }
+
+    .education-card {
+      background: #fff;
+      border-radius: 1.6em;
+      box-shadow: 0 4px 24px -10px #20508115;
+      padding: 2.2rem 2rem 1.5rem 2rem;
+      min-width: 260px;
+      max-width: 600px;
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+      word-break: break-word;
+
+      &:hover,
+      &:focus-within {
+        box-shadow: 0 8px 32px -8px #20508133;
+        transform: translateY(-2px) scale(1.03);
+      }
+    }
+
+    .education-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      margin-bottom: 0.5rem;
+
+      .education-image {
+        width: 250px;
+        height: 125px;
+        object-fit: contain;
+        border-radius: 1.2em;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.13em;
+        min-width: 0;
+      }
+
+      .edu-date {
+        font-size: 1.01rem;
+        color: #9fa4af;
+        font-weight: 500;
+        margin-bottom: 0.05em;
+        white-space: nowrap;
+      }
+      .edu-title {
+        font-size: 1.13rem;
+        font-weight: 600;
+        color: #205081;
+        margin: 0;
+        letter-spacing: -0.01em;
+        line-height: 1.18;
+        white-space: normal; // allow wrapping if needed
+        word-break: break-word; // prevent overflow
+      }
+      .edu-school {
+        font-size: 1.03rem;
+        color: #232326a9;
+        font-weight: 500;
+        line-height: 1.18;
+        margin-top: 0.01em;
+      }
+    }
+
+    .edu-desc-list {
+      margin: 0 0 0 0.2rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .education-block {
+        flex-direction: column;
+        gap: 1.3rem;
+      }
+      .education-card {
+        max-width: 98vw;
+        min-width: unset;
+        padding: 1.3rem 0.7rem 1.1rem 0.7rem;
+      }
+      .education-card-header {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .education-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        .education-image {
+          margin-bottom: 0.4rem;
+        }
+        > div {
+          gap: 0.05em;
+          width: 100%;
+        }
+        .edu-title,
+        .edu-date,
+        .edu-school {
+          font-size: 1em;
+          word-break: break-word;
+          white-space: normal;
+        }
+      }
+      .education-card {
+        padding: 1rem 0.2rem 0.8rem 0.2rem;
+      }
+    }
+
     @media (max-width: 648px) {
       padding: 0 $padding-sides-mobile;
     }
     @media (min-width: 649px) {
       padding: 0 $padding-sides;
-    }
-
-    .education-image {
-      width: 250px;
-      height: 125px;
-      object-fit: contain;
-    }
-
-    .education-header {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: $padding-about;
-
-      h6 {
-        font-size: 24px;
-        padding-right: $padding-about;
-        margin-bottom: 5px;
-      }
-
-      p {
-        margin: 0;
-      }
     }
 
     @media (min-width: 649px) {
