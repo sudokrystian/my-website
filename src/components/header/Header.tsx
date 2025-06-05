@@ -52,7 +52,6 @@ const Header = () => {
           )}
         </div>
       </div>
-      {/* The RouterConfig component should be rendered inside your main App, not inside Header */}
     </div>
   );
 };
