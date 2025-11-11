@@ -1,35 +1,3 @@
-import {
-  FaJava,
-  FaReact,
-  FaPhp,
-  FaPython,
-  FaJenkins,
-  FaAndroid,
-  FaGitAlt,
-  FaHtml5,
-  FaUnity,
-  FaSoap,
-} from "react-icons/fa";
-import {
-  SiDotnet,
-  SiGradle,
-  SiJavascript,
-  SiJquery,
-  SiAngular,
-  SiMysql,
-  SiPostgresql,
-  SiTypescript,
-  SiSpring,
-  SiApachegroovy,
-  SiKotlin,
-  SiSass,
-  SiGnubash,
-  SiElasticsearch,
-  SiTensorflow,
-} from "react-icons/si";
-
-import { GiArtificialIntelligence } from "react-icons/gi";
-
 import AboutMeBox from "../../components/about-me-boxes/AboutMeBox";
 import Banner from "../../components/banner/Banner";
 import SkillBox from "../../components/skill-box/SkillBox";

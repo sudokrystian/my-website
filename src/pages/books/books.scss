@@ -1,0 +1,213 @@
+$padding-books: 15px;
+$padding-sides: 100px;
+$padding-sides-mobile: 20px;
+$font-size: 20px;
+
+.books-div {
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 70px 0;
+
+  #main-div {
+    @media (max-width: 648px) {
+      padding: $padding-books $padding-sides-mobile;
+    }
+    @media (min-width: 649px) {
+      padding: $padding-books $padding-sides;
+    }
+
+    .book-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #205081;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .book-content {
+      padding-top: 20px;
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+      align-items: flex-start;
+
+      /* Desktop layout */
+      @media (min-width: 649px) {
+        flex-direction: row;
+      }
+
+      /* Mobile layout */
+      @media (max-width: 648px) {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .book-image-container {
+        flex-shrink: 0;
+        min-width: 250px;
+
+        @media (max-width: 648px) {
+          min-width: unset;
+          width: 100%;
+          max-width: 300px;
+          margin: 0 auto;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 1.2em;
+          box-shadow: 0 4px 24px -10px #20508115;
+          display: block;
+          transition: box-shadow 0.2s;
+
+          &:hover {
+            box-shadow: 0 8px 32px -8px #20508133;
+          }
+        }
+      }
+
+      .book-text-container {
+        flex: 1;
+        min-width: 0;
+
+        p {
+          color: #232326;
+          line-height: 1.62;
+          margin: 0 0 1.5rem 0;
+          font-size: 1rem;
+          max-width: 100%;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .book-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      .download-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+
+        @media (max-width: 648px) {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+
+        .download-btn {
+          display: inline-block;
+          padding: 0.9rem 1.8rem;
+          border-radius: 0.8em;
+          font-weight: 600;
+          font-size: 1.01rem;
+          text-decoration: none;
+          transition: all 0.2s;
+          text-align: center;
+          cursor: pointer;
+          border: 2px solid transparent;
+
+          &.download-pdf {
+            background: #e6f0fa;
+            color: #205081;
+            border-color: #205081;
+
+            &:hover,
+            &:focus {
+              background: #205081;
+              color: #ffffff;
+              box-shadow: 0 4px 12px #20508133;
+            }
+          }
+
+          &.download-epub {
+            background: #fff;
+            color: #205081;
+            border-color: #205081;
+
+            &:hover,
+            &:focus {
+              background: #e6f0fa;
+              box-shadow: 0 4px 12px #20508115;
+            }
+          }
+
+          @media (max-width: 648px) {
+            width: 100%;
+            padding: 0.85rem 1.5rem;
+          }
+        }
+      }
+
+      .donation-section {
+        text-align: center;
+        padding: 1.5rem;
+        background: #f7faff;
+        border-radius: 1.2em;
+        border: 1px solid #e0ecf5;
+
+        .donation-text {
+          color: #205081;
+          font-weight: 600;
+          font-size: 1.05rem;
+          margin: 0 0 1rem 0;
+          letter-spacing: -0.01em;
+        }
+
+        .donation-links {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          flex-wrap: wrap;
+
+          .donation-link {
+            display: inline-block;
+            padding: 0.7rem 1.4rem;
+            border-radius: 0.7em;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            text-align: center;
+
+            &.paypal {
+              background: #0070ba;
+              color: #ffffff;
+
+              &:hover,
+              &:focus {
+                background: #005ea6;
+                box-shadow: 0 4px 12px #0070ba33;
+              }
+            }
+
+            &.patreon {
+              background: #f96854;
+              color: #ffffff;
+
+              &:hover,
+              &:focus {
+                background: #e55a47;
+                box-shadow: 0 4px 12px #f9685433;
+              }
+            }
+
+            @media (max-width: 648px) {
+              flex: 1 1 calc(50% - 0.5rem);
+              min-width: 120px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

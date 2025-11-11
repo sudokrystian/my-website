@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import About from "./pages/about/About";
 import Experience from "./pages/experience/Experience";
 import Contact from "./pages/contact/Contact";
+import Books from "./pages/books/books";
 import Error from "./pages/error/Error";
 import Home from "./pages/home/Home";
 import Portfolio from "./pages/portfolio/Portfolio";
@@ -18,6 +19,7 @@ const RouterConfig = () => {
       <Route path="/experience" element={<Experience />} />
       <Route path="/portfolio" element={<Portfolio />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/books" element={<Books />} />
       <Route path="/tetris" element={<Tetris />} />
       <Route path="/games" element={<Games />} />
       <Route path="/froggers" element={<FroggersGame />} />
