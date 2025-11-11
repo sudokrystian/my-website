@@ -86,6 +86,86 @@ $font-size: 20px;
       }
     }
 
+    .book-reviews {
+      margin-bottom: 0;
+      padding: 1.5rem;
+      background: #f7faff;
+      border-radius: 1.2em;
+      border: 1px solid #e0ecf5;
+      text-align: center;
+
+      .reviews-title {
+        color: #205081;
+        font-weight: 600;
+        font-size: 1.05rem;
+        margin: 0 0 1rem 0;
+        letter-spacing: -0.01em;
+      }
+
+      .reviews-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+
+        @media (max-width: 648px) {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+
+        li {
+          position: relative;
+          padding: 0;
+
+          a {
+            color: #205081;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.6rem 1.2rem;
+            border: 2px solid #205081;
+            border-radius: 0.7em;
+            display: inline-block;
+            transition: all 0.2s;
+
+            &:hover,
+            &:focus {
+              background: #205081;
+              color: #ffffff;
+              box-shadow: 0 4px 12px #20508133;
+            }
+
+            &.goodreads-link {
+              background: #927F64;
+              color: #ffffff;
+              border-color: #927F64;
+
+              &:hover,
+              &:focus {
+                background: #2c1a0c;
+                box-shadow: 0 4px 12px #38211033;
+              }
+            }
+
+            &.amazon-link {
+              background: #ff9900;
+              color: #ffffff;
+              border-color: #ff9900;
+
+              &:hover,
+              &:focus {
+                background: #e68a00;
+                box-shadow: 0 4px 12px #ff990033;
+              }
+            }
+          }
+        }
+      }
+    }
+
     .book-actions {
       display: flex;
       flex-direction: column;

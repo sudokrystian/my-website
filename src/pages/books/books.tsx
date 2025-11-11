@@ -1,7 +1,7 @@
 import "./books.scss";
 import frontcover from "../../assets/books/front_cover_min.jpg";
-import bookPdf from "../../assets/books/IslandOfPeace.pdf"; 
-import bookEpub from "../../assets/books/IslandOfPeace.epub"; 
+import bookPdf from "../../assets/books/IslandOfPeace.pdf";
+import bookEpub from "../../assets/books/IslandOfPeace.epub";
 
 const Books = () => {
   return (
@@ -15,12 +15,12 @@ const Books = () => {
           </div>
           <div className="book-text-container">
             <p>
-              In a world divided between the privileged Upper World and the harsh,
-              untamed Lower World, power is measured not only in titles and wealth
-              but in the mastery of magic itself. At the heart of this fragile
-              balance stand Sofia Elernes, a noble girl burdened by expectations
-              and ideals, and Kristoffer, her servant—bound by contract, yet
-              driven by a will that runs deeper than blood or law.
+              In a world divided between the privileged Upper World and the
+              harsh, untamed Lower World, power is measured not only in titles
+              and wealth but in the mastery of magic itself. At the heart of
+              this fragile balance stand Sofia Elernes, a noble girl burdened by
+              expectations and ideals, and Kristoffer, her servant—bound by
+              contract, yet driven by a will that runs deeper than blood or law.
             </p>
 
             <p>
@@ -59,13 +59,51 @@ const Books = () => {
             </a>
           </div>
 
+          <div className="book-reviews">
+            <p className="reviews-title">
+              If you liked the book, please leave a review:
+            </p>
+            <ul className="reviews-list">
+              <li>
+                <a
+                  href="https://www.goodreads.com/book/show/242755282-island-of-peace"
+                  className="review-link goodreads-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Goodreads
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.amazon.com/Island-Peace-Riftborn-Saga-Book-ebook/dp/B0FW7Y7WM6/"
+                  className="review-link amazon-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Amazon
+                </a>
+              </li>
+            </ul>
+          </div>
+
           <div className="donation-section">
-            <p className="donation-text">If this story was worth a beer, you can buy me one here:</p>
+            <p className="donation-text">
+              If this story was worth a beer, you can buy me one here:
+            </p>
             <div className="donation-links">
-              <a href="http://paypal.me/krystian963dev" className="donation-link paypal" title="Support on PayPal">
+              <a
+                href="http://paypal.me/krystian963dev"
+                className="donation-link paypal"
+                title="Support on PayPal"
+              >
                 PayPal
               </a>
-              <a href="https://www.patreon.com/sudokrystian" className="donation-link patreon" title="Support on Patreon">
+              <a
+                href="https://www.patreon.com/sudokrystian"
+                className="donation-link patreon"
+                title="Support on Patreon"
+              >
                 Patreon
               </a>
             </div>
