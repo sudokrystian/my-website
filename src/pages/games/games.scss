@@ -17,7 +17,18 @@ $cards-spacing: 30px;
     margin: 0 auto 1.5rem auto;
     width: 100%;
     max-width: none;
-    border-radius: 0 0 1.2rem 1.2rem;
+    padding-top: 40px;
+
+    @media (min-width: 649px) {
+      hr {
+        margin: 1rem 100px;
+      }
+    }
+    @media (max-width: 648px) {
+      hr {
+        margin: 0 20px;
+      }
+    }
   }
 
   .games-title {
@@ -90,7 +101,9 @@ $cards-spacing: 30px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    transition: transform 0.18s, box-shadow 0.22s;
+    transition:
+      transform 0.18s,
+      box-shadow 0.22s;
     position: relative;
     overflow: hidden;
     cursor: pointer;

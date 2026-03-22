@@ -17,11 +17,24 @@ $cards-spacing: 30px;
     margin: 0 auto 1.5rem auto;
     width: 100%;
     max-width: none;
+    padding-top: 40px;
   }
 
   .portfolio-title {
     padding-top: $padding-portfolio;
     text-align: center;
+  }
+
+  /* Make hr match content width (same visual width as Experience) */
+  @media (min-width: 649px) {
+    hr {
+      margin: 1rem 100px;
+    }
+  }
+  @media (max-width: 648px) {
+    hr {
+      margin: 0 20px;
+    }
   }
 
   .portfolio-projects {
