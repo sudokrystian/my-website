@@ -1,16 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap");
 
 $color: #ffffff;
+$primary-color: #205081;
+$text-color: #232326;
 $font-size: 20px;
+$line-height: 1.6;
 
 html,
 body {
-  line-height: 1.7 !important;
+  line-height: $line-height !important;
   margin: 0;
-  // font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  //   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  //   sans-serif!important;
   font-family: "Titillium Web", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: $font-size;
+  color: $text-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: $color;
@@ -48,20 +51,28 @@ button {
 
 p {
   margin-bottom: 1.5rem;
-  color: #2d333b;
-  font-size: 20px;
+  color: $text-color;
 }
 
 ul {
-  font-size: 20px;
+  margin-bottom: 1.5rem;
 }
 
-p,
-ul,
 li {
-  font-size: $font-size;
-  line-height: 1.6;
-  font-weight: 400;
-  letter-spacing: 0; // can adjust if you want more air
-  color: #232326;
+  margin-bottom: 0.5rem;
 }
+
+// Global heading styles
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.1rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.9rem; }

@@ -24,7 +24,7 @@ $from-opacity-transition: 0.7;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    overflow: visible; // allow slight overflow (skillboxes) to be visible outside the image
     .project-card-image {
       width: 100%;
       height: $project-height;
@@ -37,6 +37,14 @@ $from-opacity-transition: 0.7;
 
     .project-card-overlay {
       display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border-radius: $project-card-border-radius;
+      overflow: visible; // allow children (skillboxes) to slightly overflow and remain visible
     }
 
     &:hover {
@@ -56,31 +64,61 @@ $from-opacity-transition: 0.7;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        left: 0;
+        justify-content: flex-start; /* start from top to avoid vertical centering issues */
         transform: none;
         color: $text-color;
-        padding: 0.4em 0.7em 1.7em 0.7em;
+        padding: 0.9em 0.6em 0.9em 0.6em; /* increase top padding so title isn't cut off */
         box-sizing: border-box;
 
         .project-card-text {
-          padding: 0 10px 0.7em 10px;
-          font-size: 1.18em;
+          padding: 0 8px 0.6em 8px; /* reduce bottom padding; overlay top padding handles spacing */
+          font-size: 1.06em;
           font-weight: 600;
           letter-spacing: 0.01em;
           text-shadow: 0 2px 12px #20508144;
+          margin-bottom: 0.25rem;
         }
 
+        /* Use flex so items size to content and the last single item can be centered */
         .project-card-technologies {
           display: flex;
-          flex-direction: row;
-          justify-content: center;
           flex-wrap: wrap;
-          gap: 0.7em 1em;
-          margin: 0.7em 0 0.2em 0;
-          padding-bottom: 0.5em;
+          justify-content: center; /* center items and center wrapped last row */
+          gap: 0.5rem;
+          margin: 0.25rem 0 0 0; /* remove large top margin from global .skills-grid */
+          padding: 0.25rem;
+          width: 100%;
+          box-sizing: border-box;
+          align-items: center;
+          margin-top: auto; /* push the technologies block to the bottom of the overlay */
+        }
+
+        /* Let width be content-driven but cap to half the container so two items fit per row;
+           set a uniform responsive height and increase horizontal padding for visual balance. */
+        .project-card-technologies .skillbox {
+          min-width: 0;
+          width: auto; /* dynamic width based on text */
+          max-width: calc(50% - 0.5rem);
+          height: clamp(40px, 4.6vw, 48px);
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0 0.9rem;
+          font-size: 0.9rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          border-radius: 1.5rem;
+          box-sizing: border-box;
+        }
+
+        /* Increase icon SVG display size without relying on font-size (keeps icons consistent)
+           and ensure it doesn't scale text. */
+        .project-card-technologies .skillbox .icon {
+          width: 1.1rem;
+          height: 1.1rem;
+          margin-right: 0.5rem;
+          flex: 0 0 auto;
         }
       }
     }

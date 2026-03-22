@@ -69,9 +69,14 @@ $game-fullscreen-button-text-color: #fff;
   background-color: $game-fullscreen-button-color;
   color: $game-fullscreen-button-text-color;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, background 0.2s;
   font-size: 1.08rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  
   &:hover {
     transform: scale(1.05);
     background: #205081;
