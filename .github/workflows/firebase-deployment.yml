@@ -17,9 +17,17 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
+        id: npm-install
         run: npm ci --maxsockets 3
         env:
           NODE_OPTIONS: '--max-old-space-size=2048'
+
+      - name: Upload npm debug logs
+        if: failure() && steps.npm-install.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-debug-logs
+          path: /home/runner/.npm/_logs/
 
       - name: Lint
         run: npm run lint
