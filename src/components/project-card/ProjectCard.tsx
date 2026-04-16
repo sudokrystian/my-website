@@ -10,7 +10,7 @@ const ProjectCard = (props: { projectIndex: number }) => {
 
   return (
     <div className="project">
-      <Link to="/project" className="project-link" state={props.projectIndex}>
+      <Link to={`/project/${props.projectIndex}`} className="project-link">
         <div className="project-image-container">
           <img
             src={projects[props.projectIndex].projectImage}

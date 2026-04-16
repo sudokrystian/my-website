@@ -1,5 +1,6 @@
 @use "sass:math";
-$footer-color: #205081;
+@use "../../variables" as *;
+$footer-color: $primary;
 $footer-height: 40px;
 $icons-size: 25px;
 // $icon-margin-top: ($footer-height - $icons-size) / 2;

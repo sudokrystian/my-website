@@ -1,3 +1,5 @@
+@use "../../variables" as *;
+
 $padding-about: 15px;
 $padding-sides: 100px;
 $padding-sides-mobile: 20px;
@@ -17,13 +19,13 @@ $padding-sides-mobile: 20px;
 
   li {
     position: relative;
-    padding-left: 1.3em; // give the chevron space
+    padding-left: 1.3em;
     margin-bottom: 0.7em;
-    color: #232326;
+    color: $text-dark;
 
     &:before {
       content: "›";
-      color: #205081;
+      color: $primary;
       position: absolute;
       left: 0;
       top: 50%;
@@ -44,13 +46,13 @@ $padding-sides-mobile: 20px;
     h4 {
       font-size: 1.18em;
       font-weight: 600;
-      color: #205081;
+      color: $primary;
       margin-bottom: 0.5em;
       letter-spacing: -0.01em;
     }
     p,
     ul {
-      color: #232326;
+      color: $text-dark;
       margin-bottom: 0.5em;
       line-height: 1.62;
       max-width: 48em;
@@ -58,11 +60,11 @@ $padding-sides-mobile: 20px;
   }
 
   .about-highlight {
-    background: #e6f0fa;
+    background: $bg-highlight;
     border-radius: 0.6em;
     padding: 0 0.3em;
     font-weight: 600;
-    color: #205081;
+    color: $primary;
   }
 
   .about-list {
@@ -89,9 +91,9 @@ $padding-sides-mobile: 20px;
     }
 
     .experience-job {
-      background: #fff;
+      background: $bg-card;
       border-radius: 1.6em;
-      box-shadow: 0 4px 24px -10px #20508115;
+      box-shadow: 0 4px 24px -10px rgba($primary, 0.08);
       padding: 2.2rem 2rem 1.5rem 2rem;
       display: flex;
       flex-direction: column;
@@ -100,7 +102,7 @@ $padding-sides-mobile: 20px;
 
       &:hover,
       &:focus-within {
-        box-shadow: 0 8px 32px -8px #20508133;
+        box-shadow: 0 8px 32px -8px rgba($primary, 0.2);
       }
     }
 
@@ -114,30 +116,27 @@ $padding-sides-mobile: 20px;
         font-size: 1.3rem;
         font-weight: 700;
         margin: 0;
-        color: #205081;
+        color: $primary;
       }
       .job-date {
         font-size: 1.01rem;
-        color: #9fa4af;
+        color: $text-muted;
         font-weight: 500;
         margin-left: 0.1em;
         display: block;
       }
       .job-role {
         font-size: 1.08rem;
-        color: #212326cc;
+        color: $text-subtle;
         font-weight: 500;
         margin-top: 0.15em;
       }
       .company-img {
         max-width: 300px;
         max-height: 150px;
-        // width: 56px;
-        // height: 56px;
         border-radius: 1.2em;
-        background: #f7faff;
-        // object-fit: contain;
-        box-shadow: 0 1px 7px #20508111;
+        background: $bg-soft;
+        box-shadow: 0 1px 7px rgba($primary, 0.07);
       }
     }
 
@@ -147,23 +146,22 @@ $padding-sides-mobile: 20px;
       list-style: none;
       li {
         a.exp-link {
-          color: #205081;
+          color: $primary;
           font-weight: 600;
           text-decoration: underline dotted;
           margin: 0 0.2em;
           transition: color 0.2s;
           &:hover,
           &:focus {
-            color: #308ad7;
+            color: $primary-hover;
           }
         }
         .about-highlight {
-          // you already have this, just here for reference!
-          background: #e6f0fa;
+          background: $bg-highlight;
           border-radius: 0.5em;
           padding: 0 0.22em;
           font-weight: 600;
-          color: #205081;
+          color: $primary;
         }
       }
     }
@@ -175,7 +173,6 @@ $padding-sides-mobile: 20px;
       }
       .experience-card-header .company-img {
         max-width: 100px;
-        // max-height: 150px;
       }
     }
 
@@ -220,9 +217,9 @@ $padding-sides-mobile: 20px;
     }
 
     .education-card {
-      background: #fff;
+      background: $bg-card;
       border-radius: 1.6em;
-      box-shadow: 0 4px 24px -10px #20508115;
+      box-shadow: 0 4px 24px -10px rgba($primary, 0.08);
       padding: 2.2rem 2rem 1.5rem 2rem;
       min-width: 260px;
       max-width: 600px;
@@ -235,7 +232,7 @@ $padding-sides-mobile: 20px;
 
       &:hover,
       &:focus-within {
-        box-shadow: 0 8px 32px -8px #20508133;
+        box-shadow: 0 8px 32px -8px rgba($primary, 0.2);
         transform: translateY(-2px) scale(1.03);
       }
     }
@@ -262,7 +259,7 @@ $padding-sides-mobile: 20px;
 
       .edu-date {
         font-size: 1.01rem;
-        color: #9fa4af;
+        color: $text-muted;
         font-weight: 500;
         margin-bottom: 0.05em;
         white-space: nowrap;
@@ -270,16 +267,16 @@ $padding-sides-mobile: 20px;
       .edu-title {
         font-size: 1.13rem;
         font-weight: 600;
-        color: #205081;
+        color: $primary;
         margin: 0;
         letter-spacing: -0.01em;
         line-height: 1.18;
-        white-space: normal; // allow wrapping if needed
-        word-break: break-word; // prevent overflow
+        white-space: normal;
+        word-break: break-word;
       }
       .edu-school {
         font-size: 1.03rem;
-        color: #232326a9;
+        color: rgba($text-dark, 0.66);
         font-weight: 500;
         line-height: 1.18;
         margin-top: 0.01em;

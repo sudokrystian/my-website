@@ -30,7 +30,7 @@ describe("ProjectCard", () => {
       </MemoryRouter>,
     );
     const link = screen.getByRole("link");
-    expect(link).toHaveAttribute("href", "/project");
+    expect(link).toHaveAttribute("href", "/project/2");
   });
 
   it("renders SkillBox components for project technologies", () => {

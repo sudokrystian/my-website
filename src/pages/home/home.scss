@@ -1,7 +1,9 @@
+@use "../../variables" as *;
+
 .home-root {
   position: relative;
   min-height: 90vh;
-  max-height: 100vh; // Prevent scroll on desktop
+  max-height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -18,29 +20,29 @@
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem;
-  height: 100%; // ensure fill
+  height: 100%;
 }
 
 .welcome-row {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 4rem; // even more space
+  gap: 4rem;
   max-width: 1000px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba($bg-white, 0.8);
   border-radius: 1.7rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07);
   padding: 2.5rem 2.2rem;
 }
 
 .welcome-img {
-  width: 240px; // Larger image!
+  width: 240px;
   height: 240px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(32, 80, 129, 0.1);
-  background: #fff;
+  box-shadow: 0 4px 16px rgba($primary, 0.1);
+  background: $bg-white;
   flex-shrink: 0;
 }
 
@@ -53,13 +55,13 @@
     font-size: 1.9rem;
     font-weight: 700;
     margin: 0 0 0.5rem 0;
-    color: #205081;
+    color: $primary;
   }
   p {
     font-size: 1.10rem;
     line-height: 1.6;
     margin: 0;
-    color: #233241;
+    color: $text-body;
   }
 
   .home-buttons {
@@ -69,14 +71,14 @@
   }
 
   .tetris-button {
-    background: linear-gradient(90deg, #2eccff, #00ff99);
+    background: linear-gradient(90deg, $tetris-cyan, $tetris-green);
     color: #222;
     border: none;
     border-radius: 1.5rem;
     font-size: 1.15rem;
     font-weight: 600;
     padding: 0.9rem 2.1rem;
-    box-shadow: 0 3px 20px 0 rgba(40, 180, 255, 0.11);
+    box-shadow: 0 3px 20px 0 rgba($tetris-cyan, 0.11);
     transition: transform 0.16s, box-shadow 0.22s, background 0.22s;
     cursor: pointer;
     letter-spacing: 0.04em;
@@ -88,16 +90,16 @@
     &:hover,
     &:focus {
       transform: translateY(-2px) scale(1.04);
-      box-shadow: 0 8px 36px 0 rgba(0, 255, 200, 0.22);
-      background: linear-gradient(90deg, #00ff99, #2eccff);
+      box-shadow: 0 8px 36px 0 rgba($tetris-green, 0.22);
+      background: linear-gradient(90deg, $tetris-green, $tetris-cyan);
       color: #111;
       outline: none;
     }
   }
 
   .cv-button {
-    background: linear-gradient(90deg, #36618d 0%, #205081 100%);
-    color: #fff;
+    background: linear-gradient(90deg, $primary-light 0%, $primary 100%);
+    color: $bg-white;
     border: none;
     border-radius: 1.5rem;
     font-size: 1.08rem;
@@ -106,15 +108,15 @@
     display: flex;
     align-items: center;
     gap: 0.5em;
-    box-shadow: 0 3px 20px 0 rgba(54, 97, 141, 0.13);
+    box-shadow: 0 3px 20px 0 rgba($primary-light, 0.13);
     transition: transform 0.16s, box-shadow 0.22s, background 0.22s;
     cursor: pointer;
 
     &:hover,
     &:focus {
-      background: linear-gradient(90deg, #205081 0%, #36618d 100%);
+      background: linear-gradient(90deg, $primary 0%, $primary-light 100%);
       transform: translateY(-2px) scale(1.04);
-      box-shadow: 0 8px 36px 0 rgba(54, 97, 141, 0.22);
+      box-shadow: 0 8px 36px 0 rgba($primary-light, 0.22);
       outline: none;
     }
 

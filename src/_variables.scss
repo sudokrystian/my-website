@@ -1,0 +1,37 @@
+// ============================================
+// Design colors for the entire project
+// ============================================
+
+// Brand colors
+$primary: #205081;
+$primary-light: #36618d;
+$primary-hover: #308ad7;
+$accent: #5fb2e8;
+
+// Backgrounds
+$bg-white: #ffffff;
+$bg-soft: #f7faff;
+$bg-highlight: #e6f0fa;
+$bg-card: #ffffff;
+
+// Text
+$text-dark: #232326;
+$text-body: #233241;
+$text-muted: #9fa4af;
+$text-subtle: rgba(#212326, 0.8); // #212326cc
+
+// UI elements
+$border-light: #e0e6ed;
+$dark-surface: #212326;
+
+// Shadows (base color for rgba variations)
+$shadow-primary: rgba($primary, 0.08);
+
+// Tetris / game accents
+$tetris-cyan: #2eccff;
+$tetris-green: #00ff99;
+
+// Social brand colors
+$linkedin: #0077b5;
+$whatsapp: #25d366;
+$messenger: #00c6ff;

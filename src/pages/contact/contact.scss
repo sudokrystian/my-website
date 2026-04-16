@@ -1,3 +1,5 @@
+@use "../../variables" as *;
+
 $padding-contact: 15px;
 $padding-sides: 100px;
 $padding-sides-mobile: 20px;
@@ -24,13 +26,13 @@ $padding-sides-mobile: 20px;
   }
 
   .contact-linkedin {
-    color: #0077b5;
+    color: $linkedin;
   }
   .contact-whatsapp {
-    color: #25d366;
+    color: $whatsapp;
   }
   .contact-messenger {
-    color: #00c6ff;
+    color: $messenger;
   }
 
   img {
@@ -38,9 +40,9 @@ $padding-sides-mobile: 20px;
     height: 500px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #e0e6ed;
+    border: 3px solid $border-light;
     box-shadow: 0 2px 10px rgba(50, 63, 90, 0.06);
-    background: #f7f8fa;
+    background: $bg-soft;
     float: right;
   }
 }

@@ -28,7 +28,7 @@ const RouterConfig = () => {
         <Route path="/tetris" element={<Tetris />} />
         <Route path="/games" element={<Games />} />
         <Route path="/froggers" element={<FroggersGame />} />
-        <Route path="/project" element={<Project />} />
+        <Route path="/project/:id" element={<Project />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Suspense>
