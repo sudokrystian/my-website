@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import type { Container } from "@tsparticles/engine";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
@@ -12,17 +11,12 @@ const MyParticles = () => {
     }).then(() => setInit(true));
   }, []);
 
-  const particlesLoaded = async (_container?: Container) => {
-    // TODO: Might load the images now
-  };
-
   if (!init) return null;
 
   return (
     <div className="canvas-absolute">
       <Particles
         id="tsparticles"
-        particlesLoaded={particlesLoaded}
         options={{
           background: {
             color: {
