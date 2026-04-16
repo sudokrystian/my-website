@@ -1,3 +1,10 @@
+import {
+  FaLinkedin,
+  FaWhatsappSquare,
+  FaFacebookSquare,
+  FaGithubSquare,
+  FaGitlab,
+} from "react-icons/fa";
 import "./footer.scss";
 
 const Footer = () => {
@@ -9,7 +16,7 @@ const Footer = () => {
         rel="noreferrer"
         aria-label="LinkedIn"
       >
-        <i className="fab fa-linkedin footer-icon"></i>
+        <FaLinkedin className="footer-icon" />
       </a>
       <a
         href="https://wa.me/4591980198"
@@ -17,7 +24,7 @@ const Footer = () => {
         rel="noreferrer"
         aria-label="WhatsApp"
       >
-        <i className="fab fa-whatsapp-square footer-icon"></i>
+        <FaWhatsappSquare className="footer-icon" />
       </a>
       <a
         href="https://facebook.com/sudokrystian"
@@ -25,7 +32,7 @@ const Footer = () => {
         rel="noreferrer"
         aria-label="Facebook"
       >
-        <i className="fab fa-facebook-square footer-icon"></i>
+        <FaFacebookSquare className="footer-icon" />
       </a>
       <a
         href="https://github.com/sudokrystian"
@@ -33,7 +40,7 @@ const Footer = () => {
         rel="noreferrer"
         aria-label="GitHub"
       >
-        <i className="fab fa-brands fa-github-square footer-icon"></i>
+        <FaGithubSquare className="footer-icon" />
       </a>
       <a
         href="https://gitlab.com/sudokrystian/"
@@ -41,7 +48,7 @@ const Footer = () => {
         rel="noreferrer"
         aria-label="GitLab"
       >
-        <i className="fab fa-gitlab footer-icon"></i>
+        <FaGitlab className="footer-icon" />
       </a>
     </div>
   );

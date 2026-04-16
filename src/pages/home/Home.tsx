@@ -3,6 +3,7 @@ import MyParticles from "../../components/particles/MyParticles";
 import cv from "../../assets/documents/CV.pdf";
 import ghibli from "../../assets/my_pictures/new/ghibli.webp";
 import { Link } from "react-router-dom";
+import { FaCloudDownloadAlt } from "react-icons/fa";
 
 const Home = () => {
   return (
@@ -26,7 +27,7 @@ const Home = () => {
               </Link>
               <a href={cv} target="_blank" rel="noreferrer" className="cv-button">
                 <span className="download-icon">
-                  <i className="fas fa-cloud-download-alt"></i>
+                  <FaCloudDownloadAlt />
                 </span>
                 Download my CV
               </a>

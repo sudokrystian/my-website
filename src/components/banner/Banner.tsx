@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import kluska from "../../assets/my_pictures/new/kluska.webp";
 import iceland from "../../assets/my_pictures/new/iceland.webp";
 import sea from "../../assets/my_pictures/new/sea.webp";
@@ -51,7 +52,7 @@ const Banner = () => {
             onClick={getPreviousPicture}
             aria-label="Previous picture"
           >
-            <i className="fas fa-angle-left"></i>
+            <FaAngleLeft />
           </button>
           <img src={pictures[index]} className="banner-pic" alt={bannerText[index]} />
           <button
@@ -59,7 +60,7 @@ const Banner = () => {
             onClick={getNextPicture}
             aria-label="Next picture"
           >
-            <i className="fas fa-angle-right"></i>
+            <FaAngleRight />
           </button>
         </div>
         <p className="banner-text">{bannerText[index]}</p>

@@ -21,17 +21,16 @@ $icon-margin-top: math.div($footer-height - $icons-size, 2);
     align-items: center;
 
     a {
-        width: $icons-size;
-        height: $icons-size;
         margin-right: 10px;
+        display: flex;
+        align-items: center;
         &:hover {
             color: unset;
         }
     }
 
     .footer-icon {
-        margin-right: 10px;
-        width: $icons-size !important;
+        width: $icons-size;
         height: $icons-size;
     }
 }
