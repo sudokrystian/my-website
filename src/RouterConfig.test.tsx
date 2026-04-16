@@ -45,48 +45,48 @@ const renderRoute = (path: string) =>
   );
 
 describe("RouterConfig", () => {
-  it("renders Home on /", () => {
+  it("renders Home on /", async () => {
     renderRoute("/");
-    expect(screen.getByText("Home Page")).toBeInTheDocument();
+    expect(await screen.findByText("Home Page")).toBeInTheDocument();
   });
 
-  it("renders About on /about", () => {
+  it("renders About on /about", async () => {
     renderRoute("/about");
-    expect(screen.getByText("About Page")).toBeInTheDocument();
+    expect(await screen.findByText("About Page")).toBeInTheDocument();
   });
 
-  it("renders Experience on /experience", () => {
+  it("renders Experience on /experience", async () => {
     renderRoute("/experience");
-    expect(screen.getByText("Experience Page")).toBeInTheDocument();
+    expect(await screen.findByText("Experience Page")).toBeInTheDocument();
   });
 
-  it("renders Portfolio on /portfolio", () => {
+  it("renders Portfolio on /portfolio", async () => {
     renderRoute("/portfolio");
-    expect(screen.getByText("Portfolio Page")).toBeInTheDocument();
+    expect(await screen.findByText("Portfolio Page")).toBeInTheDocument();
   });
 
-  it("renders Contact on /contact", () => {
+  it("renders Contact on /contact", async () => {
     renderRoute("/contact");
-    expect(screen.getByText("Contact Page")).toBeInTheDocument();
+    expect(await screen.findByText("Contact Page")).toBeInTheDocument();
   });
 
-  it("renders Books on /books", () => {
+  it("renders Books on /books", async () => {
     renderRoute("/books");
-    expect(screen.getByText("Books Page")).toBeInTheDocument();
+    expect(await screen.findByText("Books Page")).toBeInTheDocument();
   });
 
-  it("renders Tetris on /tetris", () => {
+  it("renders Tetris on /tetris", async () => {
     renderRoute("/tetris");
-    expect(screen.getByText("Tetris Page")).toBeInTheDocument();
+    expect(await screen.findByText("Tetris Page")).toBeInTheDocument();
   });
 
-  it("renders Games on /games", () => {
+  it("renders Games on /games", async () => {
     renderRoute("/games");
-    expect(screen.getByText("Games Page")).toBeInTheDocument();
+    expect(await screen.findByText("Games Page")).toBeInTheDocument();
   });
 
-  it("renders Error on unknown route", () => {
+  it("renders Error on unknown route", async () => {
     renderRoute("/some-nonexistent-path");
-    expect(screen.getByText("Error Page")).toBeInTheDocument();
+    expect(await screen.findByText("Error Page")).toBeInTheDocument();
   });
 });

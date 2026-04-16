@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./Tetris.scss";
 import {
   ROWS,
@@ -11,6 +11,16 @@ import {
 
 const INTERVAL = 500; // ms drop speed
 
+const COLORS = [
+  "#00f0f0", // I
+  "#ffbf00", // O
+  "#8000ff", // T
+  "#ff8000", // L
+  "#0000ff", // J
+  "#00ff00", // S
+  "#ff0000", // Z
+];
+
 // --- Main component
 const Tetris: React.FC = () => {
   const [board, setBoard] = useState<number[][]>(emptyBoard());
@@ -19,6 +29,90 @@ const Tetris: React.FC = () => {
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
 
+  // Refs to always have current state in callbacks without re-creating them
+  const boardRef = useRef(board);
+  const shapeRef = useRef(shape);
+  const posRef = useRef(pos);
+  const scoreRef = useRef(score);
+  const gameOverRef = useRef(gameOver);
+
+  boardRef.current = board;
+  shapeRef.current = shape;
+  posRef.current = pos;
+  scoreRef.current = score;
+  gameOverRef.current = gameOver;
+
+  const merge = useCallback((customBoard?: number[][]) => {
+    const b = customBoard ?? boardRef.current;
+    const s = shapeRef.current;
+    const p = posRef.current;
+    const merged = b.map((row) => [...row]);
+    for (let y = 0; y < s.length; ++y) {
+      for (let x = 0; x < s[0].length; ++x) {
+        if (s[y][x]) merged[p.y + y][p.x + x] = s[y][x];
+      }
+    }
+    return merged;
+  }, []);
+
+  const move = useCallback(
+    (dx: number, dy: number) => {
+      const currentBoard = boardRef.current;
+      const currentShape = shapeRef.current;
+      const currentPos = posRef.current;
+      const newPos = { x: currentPos.x + dx, y: currentPos.y + dy };
+
+      if (!collide(currentBoard, currentShape, newPos)) {
+        setPos(newPos);
+      } else if (dy) {
+        // Piece lands
+        const mergedBoard = merge();
+
+        // Clear full rows and calculate score
+        let linesCleared = 0;
+        const filtered = mergedBoard.filter((row) => {
+          const isFull = row.every((cell) => cell);
+          if (isFull) linesCleared++;
+          return !isFull;
+        });
+        while (filtered.length < ROWS) filtered.unshift(Array(COLS).fill(0));
+        setBoard(filtered);
+
+        if (linesCleared > 0)
+          setScore(scoreRef.current + linesCleared * 100);
+
+        // Next piece
+        const nextShape = randomTetromino();
+        const startPos = { x: 3, y: 0 };
+        if (collide(filtered, nextShape, startPos)) {
+          setGameOver(true);
+        } else {
+          setShape(nextShape);
+          setPos(startPos);
+        }
+      }
+    },
+    [merge],
+  );
+
+  const rotateShape = useCallback(() => {
+    const rotated = rotate(shapeRef.current);
+    if (!collide(boardRef.current, rotated, posRef.current)) setShape(rotated);
+  }, []);
+
+  const drop = useCallback(() => {
+    const currentShape = shapeRef.current;
+    const currentPos = posRef.current;
+    const currentBoard = boardRef.current;
+    let newY = currentPos.y;
+    while (!collide(currentBoard, currentShape, { x: currentPos.x, y: newY + 1 })) {
+      newY += 1;
+    }
+    setPos({ ...currentPos, y: newY });
+    // Lock the piece on next tick so the ref has the updated pos
+    setTimeout(() => move(0, 1), 0);
+  }, [move]);
+
   // Drop logic
   useEffect(() => {
     if (gameOver) return;
@@ -26,13 +120,12 @@ const Tetris: React.FC = () => {
       move(0, 1);
     }, INTERVAL);
     return () => clearInterval(interval);
-    // eslint-disable-next-line
-  }, [shape, pos, board, gameOver]);
+  }, [gameOver, move]);
 
   // Handle keyboard input
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (gameOver) return;
+      if (gameOverRef.current) return;
       if (e.key === "ArrowLeft") move(-1, 0);
       if (e.key === "ArrowRight") move(1, 0);
       if (e.key === "ArrowDown") move(0, 1);
@@ -41,85 +134,26 @@ const Tetris: React.FC = () => {
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-    // eslint-disable-next-line
-  }, [shape, pos, board, gameOver]);
+  }, [move, rotateShape, drop]);
 
-  // --- Movement, Rotation, Drop
-  const merge = (customBoard = board) => {
-    const merged = customBoard.map((row) => [...row]);
-    for (let y = 0; y < shape.length; ++y) {
-      for (let x = 0; x < shape[0].length; ++x) {
-        if (shape[y][x]) merged[pos.y + y][pos.x + x] = shape[y][x];
-      }
-    }
-    return merged;
-  };
+  const handleMobileMove = useCallback(
+    (dir: "left" | "right" | "down" | "rotate") => {
+      if (dir === "left") move(-1, 0);
+      if (dir === "right") move(1, 0);
+      if (dir === "down") move(0, 1);
+      if (dir === "rotate") rotateShape();
+    },
+    [move, rotateShape],
+  );
 
-const move = (dx: number, dy: number) => {
-  const newPos = { x: pos.x + dx, y: pos.y + dy };
-
-  if (!collide(board, shape, newPos)) {
-    setPos(newPos);
-  } else if (dy) {
-    // Piece lands
-    const mergedBoard = merge();
-
-    // Clear full rows and calculate score
-    let linesCleared = 0;
-    const filtered = mergedBoard.filter(row => {
-      const isFull = row.every(cell => cell);
-      if (isFull) linesCleared++;
-      return !isFull;
-    });
-    while (filtered.length < ROWS) filtered.unshift(Array(COLS).fill(0));
-    setBoard(filtered);
-
-    // Score: 100 points per cleared row (customize if you want)
-    if (linesCleared > 0) setScore(score + linesCleared * 100);
-
-    // Next piece
-    const nextShape = randomTetromino();
-    const startPos = { x: 3, y: 0 };
-    if (collide(filtered, nextShape, startPos)) {
-      setGameOver(true);
-    } else {
-      setShape(nextShape);
-      setPos(startPos);
-    }
-  }
-};
-
-  const rotateShape = () => {
-    const rotated = rotate(shape);
-    if (!collide(board, rotated, pos)) setShape(rotated);
-  };
-
-  const drop = () => {
-    let newY = pos.y;
-    while (!collide(board, shape, { x: pos.x, y: newY + 1 })) {
-      newY += 1;
-    }
-    setPos({ ...pos, y: newY });
-    move(0, 1); // lock the piece
-  };
-
-  // --- Touch controls for mobile
-  const handleMobileMove = (dir: "left" | "right" | "down" | "rotate") => {
-    if (dir === "left") move(-1, 0);
-    if (dir === "right") move(1, 0);
-    if (dir === "down") move(0, 1);
-    if (dir === "rotate") rotateShape();
-  };
-
-  const restart = () => {
+  const restart = useCallback(() => {
     setBoard(emptyBoard());
     setShape(randomTetromino());
     setPos({ x: 3, y: 0 });
     setScore(0);
     setGameOver(false);
-  };
+  }, []);
 
-  // --- Render
   // Draw the board with current piece
   const displayBoard = merge();
 
@@ -146,20 +180,10 @@ const move = (dx: number, dy: number) => {
                   key={`${y}-${x}`}
                   className={`cell cell-${cell}`}
                   style={{
-                    background: cell
-                      ? [
-                          "#00f0f0", // I
-                          "#ffbf00", // O
-                          "#8000ff", // T
-                          "#ff8000", // L
-                          "#0000ff", // J
-                          "#00ff00", // S
-                          "#ff0000", // Z
-                        ][cell - 1]
-                      : "#191919",
+                    background: cell ? COLORS[cell - 1] : "#191919",
                   }}
                 />
-              ))
+              )),
             )}
           </div>
           <div className="controls">
