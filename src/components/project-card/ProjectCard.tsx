@@ -1,4 +1,4 @@
-import { BrowserRouter as Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import projects from "../../constants/projectData";
 import { techIcons } from "../../constants/techIcons";
 import { FaQuestion } from "react-icons/fa";

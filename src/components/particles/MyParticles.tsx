@@ -9,7 +9,7 @@ const MyParticles = () => {
   }, []);
 
   const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {
+    async (_container: Container | undefined) => {
       // TODO: Might load the images now
     },
     []

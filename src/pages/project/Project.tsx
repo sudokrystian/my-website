@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import projects from "../../constants/projectData";
 import SkillBox from "../../components/skill-box/SkillBox";

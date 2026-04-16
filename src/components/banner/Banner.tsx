@@ -6,16 +6,9 @@ import beer from "../../assets/my_pictures/new/beer.webp";
 import cave from "../../assets/my_pictures/new/cave.webp";
 import "./banner.scss";
 
-const Banner = () => {
-  const pictures: string[] = [kluska, sea, beer, iceland, cave];
-  const traits: string[] = [
-    "friendly",
-    "creative",
-    "hard-working",
-    "headstrong",
-    "communicative",
-  ];
+const pictures: string[] = [kluska, sea, beer, iceland, cave];
 
+const Banner = () => {
   const bannerText: string[] = [
     "My favorite Project Manager",
     "One day after the release",
@@ -29,7 +22,7 @@ const Banner = () => {
       const img = new window.Image();
       img.src = src;
     });
-  }, [pictures]);
+  }, []);
 
   const [index, setIndex] = useState<number>(0);
 
