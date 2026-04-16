@@ -15,6 +15,12 @@ const mobileGames = [
 ];
 
 const desktopGames = [
+  // {
+  //   title: "Gladius",
+  //   description: "3D sword-fighting duel. Control your blade with the mouse!",
+  //   image: gladius
+  //   link: "/gladius",
+  // },
   {
     title: "Froggers",
     description: "Become a legendary frog warrior looking for his pond!",

@@ -1,0 +1,221 @@
+@use "../../../variables" as *;
+
+.gladius-root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+// ── Menu overlay ──
+.gladius-menu-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($dark-surface, 0.85);
+}
+
+.gladius-menu-card {
+  text-align: center;
+  background: rgba($bg-white, 0.05);
+  border: 1px solid rgba($bg-white, 0.12);
+  border-radius: 1.5rem;
+  padding: 3rem 3.5rem;
+  backdrop-filter: blur(12px);
+
+  h2 {
+    color: $bg-white;
+    font-size: 2.5rem;
+    margin: 0 0 0.2rem 0;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .gladius-subtitle {
+    color: $accent;
+    font-size: 1.1rem;
+    font-style: italic;
+    margin: 0 0 2rem 0;
+  }
+
+  .gladius-controls-info {
+    text-align: left;
+    margin-bottom: 2rem;
+
+    p {
+      color: rgba($bg-white, 0.75);
+      font-size: 0.95rem;
+      margin: 0.4rem 0;
+    }
+  }
+}
+
+// ── Buttons ──
+.gladius-btn {
+  border: 1px solid rgba($bg-white, 0.2);
+  background: rgba($bg-white, 0.08);
+  color: $bg-white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.18s;
+  margin: 0 0.5rem;
+
+  &:hover {
+    background: rgba($bg-white, 0.15);
+    transform: translateY(-1px);
+  }
+}
+
+.gladius-btn-primary {
+  background: $primary;
+  border-color: $primary-light;
+
+  &:hover {
+    background: $primary-hover;
+  }
+}
+
+// ── HUD ──
+.gladius-hud {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gladius-hud-top {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gladius-hud-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.gladius-fighter-stats {
+  background: rgba($dark-surface, 0.8);
+  border-radius: 0.8rem;
+  padding: 0.8rem 1rem;
+  min-width: 200px;
+}
+
+.gladius-fighter-label {
+  color: $bg-white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+.gladius-stat-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.gladius-stat-label {
+  color: rgba($bg-white, 0.6);
+  font-size: 0.7rem;
+  font-weight: 600;
+  width: 2rem;
+  text-transform: uppercase;
+}
+
+.gladius-bar-track {
+  flex: 1;
+  height: 8px;
+  background: rgba($bg-white, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gladius-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.15s ease;
+}
+
+.gladius-stat-value {
+  color: rgba($bg-white, 0.5);
+  font-size: 0.65rem;
+  font-weight: 500;
+  width: 3.5rem;
+  text-align: right;
+}
+
+.gladius-direction-indicator {
+  background: rgba($dark-surface, 0.8);
+  border-radius: 0.8rem;
+  padding: 0.6rem 1rem;
+  text-align: center;
+
+  .gladius-direction-text {
+    color: $bg-white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .gladius-action-text {
+    color: $accent;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+}
+
+// ── Game Over ──
+.gladius-gameover-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.gladius-gameover-card {
+  text-align: center;
+  background: rgba($dark-surface, 0.95);
+  border-radius: 1.5rem;
+  padding: 3rem 4rem;
+
+  p {
+    color: rgba($bg-white, 0.7);
+    margin-bottom: 2rem;
+  }
+}
+
+.gladius-victory {
+  color: #00ff99;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gladius-defeat {
+  color: #e04040;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gladius-gameover-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}

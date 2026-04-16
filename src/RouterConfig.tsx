@@ -13,6 +13,7 @@ const Games = lazy(() => import("./pages/games/Games"));
 const FroggersGame = lazy(
   () => import("./pages/games/froggers-game/FroggersGame"),
 );
+const Gladius = lazy(() => import("./pages/games/gladius/Gladius"));
 const Project = lazy(() => import("./pages/project/Project"));
 const Error = lazy(() => import("./pages/error/Error"));
 
@@ -47,6 +48,14 @@ const RouterConfig = () => {
           element={
             <ErrorBoundary fallback={GameErrorFallback}>
               <FroggersGame />
+            </ErrorBoundary>
+          }
+        />
+        <Route
+          path="/gladius"
+          element={
+            <ErrorBoundary fallback={GameErrorFallback}>
+              <Gladius />
             </ErrorBoundary>
           }
         />
