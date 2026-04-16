@@ -45,13 +45,18 @@ const Header = () => {
             ))}
           </ul>
         </div>
-        <div className="mobile-menu" onClick={handleClick}>
+        <button
+          className="mobile-menu"
+          onClick={handleClick}
+          aria-label={click ? "Close menu" : "Open menu"}
+          aria-expanded={click}
+        >
           {click ? (
             <CloseMenu className="menu-icon" />
           ) : (
             <MenuIcon className="menu-icon" />
           )}
-        </div>
+        </button>
       </div>
     </div>
   );

@@ -29,8 +29,8 @@ const Games = () => {
         <h3 className="games-title">Play Games</h3>
         <hr />
       </div>
+      <MyParticles />
       <div className="games-list">
-        <MyParticles />
         <h4 className="games-section-title">Desktop & Mobile Games</h4>
         <div className="games-section">
           {mobileGames.map((game, idx) => (

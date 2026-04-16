@@ -18,13 +18,13 @@ vi.mock("./pages/portfolio/Portfolio", () => ({
 vi.mock("./pages/contact/Contact", () => ({
   default: () => <div>Contact Page</div>,
 }));
-vi.mock("./pages/books/books", () => ({
+vi.mock("./pages/books/Books", () => ({
   default: () => <div>Books Page</div>,
 }));
 vi.mock("./pages/games/tetris/Tetris", () => ({
   default: () => <div>Tetris Page</div>,
 }));
-vi.mock("./pages/games/games", () => ({
+vi.mock("./pages/games/Games", () => ({
   default: () => <div>Games Page</div>,
 }));
 vi.mock("./pages/games/froggers-game/FroggersGame", () => ({

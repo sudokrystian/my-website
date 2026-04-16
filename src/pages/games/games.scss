@@ -3,6 +3,7 @@ $cards-spacing: 30px;
 
 .games-div {
   position: relative;
+  min-height: 100vh;
   padding: 110px $padding-games 0 $padding-games;
 
   .games-header {

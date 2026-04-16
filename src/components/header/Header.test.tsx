@@ -48,8 +48,9 @@ describe("Header", () => {
     const navOptions = document.querySelector(".nav-options");
     expect(navOptions).not.toHaveClass("active");
 
-    const menuToggle = document.querySelector(".mobile-menu")!;
+    const menuToggle = screen.getByLabelText("Open menu");
     await user.click(menuToggle);
     expect(document.querySelector(".nav-options")).toHaveClass("active");
+    expect(menuToggle).toHaveAttribute("aria-expanded", "true");
   });
 });

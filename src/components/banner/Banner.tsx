@@ -46,13 +46,21 @@ const Banner = () => {
     <div className="banner-div">
       <div className="banner-box">
         <div className="pictures-box">
-          <div className="banner-placeholder" onClick={getPreviousPicture}>
+          <button
+            className="banner-placeholder"
+            onClick={getPreviousPicture}
+            aria-label="Previous picture"
+          >
             <i className="fas fa-angle-left"></i>
-          </div>
-          <img src={pictures[index]} className="banner-pic" alt="Peace pic" />
-          <div className="banner-placeholder" onClick={getNextPicture}>
+          </button>
+          <img src={pictures[index]} className="banner-pic" alt={bannerText[index]} />
+          <button
+            className="banner-placeholder"
+            onClick={getNextPicture}
+            aria-label="Next picture"
+          >
             <i className="fas fa-angle-right"></i>
-          </div>
+          </button>
         </div>
         <p className="banner-text">{bannerText[index]}</p>
       </div>

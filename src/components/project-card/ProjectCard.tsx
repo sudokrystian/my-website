@@ -14,7 +14,7 @@ const ProjectCard = (props: { projectIndex: number }) => {
         <div className="project-image-container">
           <img
             src={projects[props.projectIndex].projectImage}
-            alt="Project"
+            alt={projects[props.projectIndex].projectTitle}
             className="project-card-image"
           />
           <div className="project-card-overlay">

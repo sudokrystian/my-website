@@ -37,15 +37,15 @@ const AboutMeBox = (props: {
   return (
     <div className="about-me-boxes">
       {boxes.map(({ id, label, icon, section }) => (
-        <div
+        <a
           className="about-me-card"
           id={id}
           key={id}
-          onClick={() => window.open("#" + section, "_self")}
+          href={"#" + section}
         >
           <div className="about-me-card-icon">{icon}</div>
           <span>{label}</span>
-        </div>
+        </a>
       ))}
     </div>
   );

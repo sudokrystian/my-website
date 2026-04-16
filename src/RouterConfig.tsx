@@ -6,9 +6,9 @@ const About = lazy(() => import("./pages/about/About"));
 const Experience = lazy(() => import("./pages/experience/Experience"));
 const Portfolio = lazy(() => import("./pages/portfolio/Portfolio"));
 const Contact = lazy(() => import("./pages/contact/Contact"));
-const Books = lazy(() => import("./pages/books/books"));
+const Books = lazy(() => import("./pages/books/Books"));
 const Tetris = lazy(() => import("./pages/games/tetris/Tetris"));
-const Games = lazy(() => import("./pages/games/games"));
+const Games = lazy(() => import("./pages/games/Games"));
 const FroggersGame = lazy(
   () => import("./pages/games/froggers-game/FroggersGame"),
 );

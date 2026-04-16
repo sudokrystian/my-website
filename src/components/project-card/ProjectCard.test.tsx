@@ -19,7 +19,7 @@ describe("ProjectCard", () => {
         <ProjectCard projectIndex={0} />
       </MemoryRouter>,
     );
-    const img = screen.getByAltText("Project");
+    const img = screen.getByAltText(projects[0].projectTitle);
     expect(img).toBeInTheDocument();
   });
 
