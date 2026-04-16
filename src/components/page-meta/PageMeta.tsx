@@ -7,9 +7,9 @@ interface PageMetaProps {
 
 const PageMeta = ({ title, description }: PageMetaProps) => (
   <Helmet>
-    <title>{title} — Krystian</title>
+    <title>{title} — Krystian Gołuch</title>
     <meta name="description" content={description} />
-    <meta property="og:title" content={`${title} — Krystian`} />
+    <meta property="og:title" content={`${title} — Krystian Gołuch`} />
     <meta property="og:description" content={description} />
   </Helmet>
 );
