@@ -18,6 +18,7 @@ const FroggersGame = () => {
     unityProvider,
     isLoaded: unityIsLoaded,
     requestFullscreen,
+    unload,
   } = useUnityContext(unityConfig);
 
   useEffect(() => {
@@ -30,8 +31,9 @@ const FroggersGame = () => {
     return () => {
       window.removeEventListener("resize", handleWindowSizeChange);
       document.body.style.backgroundColor = "#ffffff";
+      unload();
     };
-  }, []);
+  }, [unload]);
 
   function gameFullscreen() {
     requestFullscreen(true);
