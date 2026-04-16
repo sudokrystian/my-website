@@ -1,4 +1,5 @@
 import "./home.scss";
+import PageMeta from "../../components/page-meta/PageMeta";
 import MyParticles from "../../components/particles/MyParticles";
 import cv from "../../assets/documents/CV.pdf";
 import ghibli from "../../assets/my_pictures/new/ghibli.webp";
@@ -8,6 +9,7 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 const Home = () => {
   return (
     <div className="home-root">
+      <PageMeta title="Home" description="Krystian's portfolio — software engineer specializing in Java, Elasticsearch, React, and system design." />
       <MyParticles />
       <div className="welcome-section">
         <div className="welcome-row">

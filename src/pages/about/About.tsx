@@ -1,6 +1,7 @@
 import AboutMeBox from "../../components/about-me-boxes/AboutMeBox";
 import Banner from "../../components/banner/Banner";
 import SkillBox from "../../components/skill-box/SkillBox";
+import PageMeta from "../../components/page-meta/PageMeta";
 import "./about.scss";
 import HobbiesSection from "../../components/hobbies-section/HobbiesSection";
 import { techIcons } from "../../constants/techIcons";
@@ -17,6 +18,7 @@ const About = () => {
 
   return (
     <div className="about-div">
+      <PageMeta title="About" description="Backend-focused software engineer — experience at CERN and Stibo Systems, skills in Java, Elasticsearch, Gradle, and React." />
       <div id="introduction-div">
         <h3 className="about-title">About me</h3>
         <hr />

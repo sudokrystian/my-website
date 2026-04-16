@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
+import ErrorBoundary from "./components/error-boundary/ErrorBoundary";
 
 const Home = lazy(() => import("./pages/home/Home"));
 const About = lazy(() => import("./pages/about/About"));
@@ -15,6 +16,13 @@ const FroggersGame = lazy(
 const Project = lazy(() => import("./pages/project/Project"));
 const Error = lazy(() => import("./pages/error/Error"));
 
+const GameErrorFallback = (
+  <div style={{ padding: "2rem", textAlign: "center" }}>
+    <h2>The game crashed.</h2>
+    <p>Try refreshing the page to play again.</p>
+  </div>
+);
+
 const RouterConfig = () => {
   return (
     <Suspense fallback={<div className="loading">Loading...</div>}>
@@ -25,9 +33,23 @@ const RouterConfig = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/books" element={<Books />} />
-        <Route path="/tetris" element={<Tetris />} />
+        <Route
+          path="/tetris"
+          element={
+            <ErrorBoundary fallback={GameErrorFallback}>
+              <Tetris />
+            </ErrorBoundary>
+          }
+        />
         <Route path="/games" element={<Games />} />
-        <Route path="/froggers" element={<FroggersGame />} />
+        <Route
+          path="/froggers"
+          element={
+            <ErrorBoundary fallback={GameErrorFallback}>
+              <FroggersGame />
+            </ErrorBoundary>
+          }
+        />
         <Route path="/project/:id" element={<Project />} />
         <Route path="*" element={<Error />} />
       </Routes>

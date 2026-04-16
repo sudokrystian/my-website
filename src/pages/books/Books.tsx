@@ -1,4 +1,5 @@
 import "./books.scss";
+import PageMeta from "../../components/page-meta/PageMeta";
 import frontcover from "../../assets/books/front_cover_min.jpg";
 import bookPdf from "../../assets/books/IslandOfPeace.pdf";
 import bookEpub from "../../assets/books/IslandOfPeace.epub";
@@ -6,6 +7,7 @@ import bookEpub from "../../assets/books/IslandOfPeace.epub";
 const Books = () => {
   return (
     <div className="books-div">
+      <PageMeta title="My Book" description="Island Of Peace — a fantasy novel by Krystian. Free to download as PDF or EPUB." />
       <div id="main-div">
         <h3 className="book-title">Island Of Peace</h3>
         <hr />

@@ -1,5 +1,6 @@
 import "./games.scss";
 import { Link } from "react-router-dom";
+import PageMeta from "../../components/page-meta/PageMeta";
 import MyParticles from "../../components/particles/MyParticles";
 import froggersImg from "../../assets/my_projects/froggers.png";
 import tetris from "../../assets/games/tetris.webp";
@@ -43,6 +44,7 @@ const GameCard = (props: {
 const Games = () => {
   return (
     <div className="games-div">
+      <PageMeta title="Games" description="Play Tetris and Froggers — browser games built with React and Unity." />
       <div className="games-header">
         <h3 className="games-title">Play Games</h3>
         <hr />

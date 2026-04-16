@@ -1,9 +1,11 @@
 import phone from "../../assets/my_pictures/new/phone.webp";
+import PageMeta from "../../components/page-meta/PageMeta";
 import "./contact.scss";
 
 const Contact = () => {
   return (
     <div className="contact-div">
+      <PageMeta title="Contact" description="Get in touch with Krystian via LinkedIn, WhatsApp, or Messenger." />
       <h3 className="contact-title">Contact me</h3>
       <hr />
       <p>

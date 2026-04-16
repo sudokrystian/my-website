@@ -1,9 +1,11 @@
 import "./experience.scss";
+import PageMeta from "../../components/page-meta/PageMeta";
 import { experienceDetails } from "../../constants/experienceData";
 
 const Experience = () => {
   return (
     <div className="experience-div">
+      <PageMeta title="Experience" description="Work experience at Stibo Systems, CERN, VIA University College, and Holme Gruppen — Java, DevOps, and full-stack development." />
       <h3 className="experience-title">My experience</h3>
       <hr />
 
