@@ -76,3 +76,23 @@ h3 { font-size: 1.25rem; }
 h4 { font-size: 1.1rem; }
 h5 { font-size: 1rem; }
 h6 { font-size: 0.9rem; }
+
+// Particles layout — capped at 2560px, centered, with white bleed on ultra-wide screens
+.particles-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.particles-container {
+  width: 100%;
+  max-width: 2560px;
+  height: 100%;
+  position: relative;
+}
